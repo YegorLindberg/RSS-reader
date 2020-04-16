@@ -81,7 +81,11 @@ class NewsListViewController: UIViewController {
 //MARK: - UITableViewDelegate
 extension NewsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //navigate to news details
+        if let viewController = NewsDetailsViewController.make(news: newsList[indexPath.row]) {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            print("Error of pushing NewsDetailsViewController")
+        }
     }
 }
 
