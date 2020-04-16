@@ -19,6 +19,8 @@
 		5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F624477C1700D5D21B /* NewsDetailsViewController.swift */; };
 		5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F824477C2E00D5D21B /* WebViewViewController.swift */; };
 		5C36180D244897FC0098D741 /* news.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5C36180C244897FC0098D741 /* news.xml */; };
+		5C3F17942448DDD400DF6855 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F17932448DDD400DF6855 /* App.swift */; };
+		5C3F17972448E38F00DF6855 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F17962448E38F00DF6855 /* ArrayExtension.swift */; };
 		5C8F919C2448BFFB000D15C1 /* AppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F919B2448BFFB000D15C1 /* AppApi.swift */; };
 		84ED14BFB14B2ACF079B7754 /* libPods-Common-RSS-reader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB332FA3EA74FA33C233B70 /* libPods-Common-RSS-reader.a */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,8 @@
 		5C0941F624477C1700D5D21B /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		5C0941F824477C2E00D5D21B /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		5C36180C244897FC0098D741 /* news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = news.xml; sourceTree = "<group>"; };
+		5C3F17932448DDD400DF6855 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		5C3F17962448E38F00DF6855 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		5C8F919B2448BFFB000D15C1 /* AppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApi.swift; sourceTree = "<group>"; };
 		A8B6A53E078D68AAACF6882D /* Pods-Common-RSS-reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-RSS-reader.release.xcconfig"; path = "Target Support Files/Pods-Common-RSS-reader/Pods-Common-RSS-reader.release.xcconfig"; sourceTree = "<group>"; };
 		B90C67C6B540A1BD0513B147 /* Pods-Common-RSS-reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-RSS-reader.debug.xcconfig"; path = "Target Support Files/Pods-Common-RSS-reader/Pods-Common-RSS-reader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,10 +81,12 @@
 		5C0941D424475B1100D5D21B /* RSS-reader */ = {
 			isa = PBXGroup;
 			children = (
+				5C3F17952448E37D00DF6855 /* Extension */,
 				5C8F919A2448BEED000D15C1 /* Network */,
 				5C0941EB2447757100D5D21B /* Cell */,
 				5C0941EA2447717300D5D21B /* Entity */,
 				5C0941E92447716B00D5D21B /* Controller */,
+				5C3F17932448DDD400DF6855 /* App.swift */,
 				5C0941D524475B1100D5D21B /* AppDelegate.swift */,
 				5C0941D724475B1100D5D21B /* SceneDelegate.swift */,
 				5C0941DB24475B1100D5D21B /* Main.storyboard */,
@@ -119,6 +125,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5C3F17952448E37D00DF6855 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C3F17962448E38F00DF6855 /* ArrayExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5C8F919A2448BEED000D15C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +155,6 @@
 				B90C67C6B540A1BD0513B147 /* Pods-Common-RSS-reader.debug.xcconfig */,
 				A8B6A53E078D68AAACF6882D /* Pods-Common-RSS-reader.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -246,12 +259,14 @@
 				5C0941D624475B1100D5D21B /* AppDelegate.swift in Sources */,
 				5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */,
 				5C0941ED2447759200D5D21B /* NewsTableViewCell.swift in Sources */,
+				5C3F17942448DDD400DF6855 /* App.swift in Sources */,
 				5C0941EF244775C200D5D21B /* News.swift in Sources */,
 				5C0941F524477BF500D5D21B /* NewsListViewController.swift in Sources */,
 				5C0941D824475B1100D5D21B /* SceneDelegate.swift in Sources */,
 				5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */,
 				5C0941F324477BE600D5D21B /* SettingsViewController.swift in Sources */,
 				5C8F919C2448BFFB000D15C1 /* AppApi.swift in Sources */,
+				5C3F17972448E38F00DF6855 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

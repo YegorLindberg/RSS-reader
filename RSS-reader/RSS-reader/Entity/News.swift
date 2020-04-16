@@ -9,11 +9,15 @@
 import Foundation
 
 
-class News {
+class News: Equatable {
     var       title: String
     var        link: String
     var    imageUrl: String?
     var description: String
+    
+    static func == (lhs: News, rhs: News) -> Bool {
+        return lhs.link == rhs.link
+    }
     
     init() {
         self.title = ""

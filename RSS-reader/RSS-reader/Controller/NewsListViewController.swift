@@ -7,29 +7,50 @@
 //
 
 import UIKit
+import SDWebImage
 
 
 class NewsListViewController: UIViewController {
     
+    @IBOutlet var tableView: UITableView?
+    
+    private lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .blue
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(reloadNewsList), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
     var newsList: [News] = [] {
         didSet {
-            self.tableView?.reloadData()
+            tableView?.reloadData()
         }
     }
-
-    @IBOutlet var tableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNewsList()
+        reloadNewsList()
+        tableView?.refreshControl = refresher
     }
     
-    func loadNewsList() {
-        
+    @objc
+    func reloadNewsList() {
+        loadFromUrl()
+        let cachedNewsList = loadFromFile()
+        cachedNewsList.forEach { (news) in
+            newsList.append(news)
+        }
+        newsList.removeDuplicates()
+        let deadline = DispatchTime.now() + .milliseconds(1000)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            self.tableView?.refreshControl?.endRefreshing()
+        }
     }
     
     func loadFromUrl() {
-        AppApi().sendRequest(url: "https://developer.apple.com/news/rss/news.rss",
+        AppApi().sendRequest(url: App.appManagement.mainRSSUrl,
                          params: nil,
                          handler: { (responseString, success) in
                             if success {
@@ -41,16 +62,18 @@ class NewsListViewController: UIViewController {
         })
     }
     
-    func loadFromFile() {
+    func loadFromFile() -> [News] {
+        var cachedNewsList: [News] = []
         do {
             if let xmlUrl = Bundle.main.url(forResource: "news", withExtension: "xml") {
                 let xml = try String(contentsOf: xmlUrl)
                 let newsParser = NewsParser(withXML: xml)
-                newsList = newsParser.parse()
+                cachedNewsList = newsParser.parse()
             }
         } catch {
             print(error)
         }
+        return cachedNewsList
     }
 
 }
@@ -75,7 +98,9 @@ extension NewsListViewController: UITableViewDataSource {
         let news = newsList[indexPath.row]
         cell.titleLabel?.text = news.title
         cell.descriptionLabel?.text = news.description
-        //populate cell info
+        if let imageUrl = news.imageUrl {
+            cell.imageView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
+        }
         
         return cell
     }
