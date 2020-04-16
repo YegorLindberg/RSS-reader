@@ -22,7 +22,16 @@ class NewsListViewController: UIViewController {
     
     func loadNewsList() {
         //api request
-        
+        do {
+            if let xmlUrl = Bundle.main.url(forResource: "news", withExtension: "xml") {
+                let xml = try String(contentsOf: xmlUrl)
+                let newsParser = NewsParser(withXML: xml)
+                newsList = newsParser.parse()
+                
+            }
+        } catch {
+            print(error)
+        }
         //tableView?.reloadTable()
     }
 
@@ -42,10 +51,12 @@ extension NewsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let news = newsList[indexPath.row], let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.reuseIdentifier, for: indexPath) as? NewsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.reuseIdentifier, for: indexPath) as? NewsTableViewCell else {
             return UITableViewCell()
         }
-        
+        let news = newsList[indexPath.row]
+        cell.titleLabel?.text = news.title
+        cell.descriptionLabel?.text = news.description
         //populate cell info
         
         return cell

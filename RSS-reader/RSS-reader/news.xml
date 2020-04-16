@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<atom:link href="https://developer.apple.com/news/rss/news.rss" rel="self" type="application/rss+xml" />
+<title> - Apple Developer</title>
+<link>https://developer.apple.com/news/</link>
+<description></description>
+<language>en</language>
+<lastBuildDate>Tue, 14 Apr 2020 18:42:16 PDT</lastBuildDate>
+<generator>Custom</generator>
+<copyright>Copyright 2020, Apple Inc.</copyright>
+
+<item>
+<title>Upcoming price and tax changes in Barbados, Malaysia, Moldova, and Uzbekistan</title>
+<link>https://developer.apple.com/news/?id=04142020a</link>
+<guid>https://developer.apple.com/news/?id=04142020a</guid>
+<description>When taxes or foreign exchange rates change, we sometimes need to update prices on the App Store. In the next few days, prices of apps on the App Store and in-app purchases (excluding auto-renewable subscriptions) will change in Barbados, Moldova, and Uzbekistan due to new value-added taxes. Your proceeds will be adjusted accordingly and will be calculated based on the tax-exclusive price.A low value-added tax was also introduced in Malaysia. Prices on the App Store in Malaysia will not change and proceeds will be adjusted accordingly.You can download the updated price tier charts now. Once these changes go into effect, the Pricing and Availability section of My Apps will be updated. You can change the price of your apps and in-app purchases (including auto-renewable subscriptions) at any time in App Store Connect. If you offer subscriptions, you can choose to preserve prices for existing subscribers.View updated price tiers</description>
+<pubDate>Tue, 14 Apr 2020 18:42:16 PDT</pubDate>
+<content:encoded><![CDATA[<p>When taxes or foreign exchange rates change, we sometimes need to update prices on the App Store. In the next few days, prices of apps on the App Store and in-app purchases (excluding auto-renewable subscriptions) will change in Barbados, Moldova, and Uzbekistan due to new value-added taxes. Your proceeds will be adjusted accordingly and will be calculated based on the tax-exclusive price.</p><p>A low value-added tax was also introduced in Malaysia. Prices on the App Store in Malaysia will not change and proceeds will be adjusted accordingly.</p><p>You can download the updated price tier charts now. Once these changes go into effect, the Pricing and Availability section of My Apps will be updated. You can change the price of your apps and in-app purchases (including auto-renewable subscriptions) at any time in App Store Connect. If you offer subscriptions, you can choose to preserve prices for existing subscribers.</p><p><a href="https://itunespartner.apple.com/assets/downloads/0420-Apps-Pricing.pdf">View updated <span class="icon icon-after icon-chevronright nowrap">price tiers</span></a></p>]]></content:encoded>
+</item>
+<item>
+<title>New Financial Report Coming to App Store Connect</title>
+<link>https://developer.apple.com/news/?id=04012020a</link>
+<guid>https://developer.apple.com/news/?id=04012020a</guid>
+<description>Starting April 2020, you can get more details on the final proceeds of your apps and in-app purchases, including the transaction and settlement dates for purchases, as well as the state or province for transactions in the United States and Canada. Simply download the “All Countries or Regions (Detailed)” report in App Store Connect.View App Store Connect Help</description>
+<pubDate>Wed, 01 Apr 2020 14:02:38 PDT</pubDate>
+<content:encoded><![CDATA[<p>Starting April 2020, you can get more details on the final proceeds of your apps and in-app purchases, including the transaction and settlement dates for purchases, as well as the state or province for transactions in the United States and Canada. Simply download the “All Countries or Regions (Detailed)” report in App Store Connect.</p><p><a href="https://help.apple.com/app-store-connect/#/dev716cf3a0d">View App Store <span class="icon icon-after icon-chevronright nowrap">Connect Help</span></a></p>]]></content:encoded>
+</item>
+<entry>
+      <title type="html">Swift Logging</title>
+      <link href="https://nshipster.com/swift-log/" rel="alternate" type="text/html" title="Swift Logging" />
+      <published>2020-03-26T00:00:00-07:00</published>
+      <updated>2020-03-26T00:00:00-07:00</updated>
+      <id>https://nshipster.com/swift-log</id>
+      <content type="html" xml:base="https://nshipster.com/swift-log/">
+        &lt;p&gt;In 2002,
+        the United States Congress enacted
+        the &lt;a href=&quot;https://en.wikipedia.org/wiki/Sarbanes%E2%80%93Oxley_Act&quot; rel=&quot;noopener noreferrer&quot;&gt;Sarbanes–Oxley Act&lt;/a&gt;,
+        which introduced broad oversight to corporations
+        in response to accounting scandals at companies like
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/Enron_scandal&quot; rel=&quot;noopener noreferrer&quot;&gt;Enron&lt;/a&gt; and 
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/MCI_Inc.#Accounting_scandals&quot; rel=&quot;noopener noreferrer&quot;&gt;MCI WorldCom&lt;/a&gt;
+        around that time.
+        This act,
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/PCI_DSS&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;abbr title=&quot;Payment Card Industry Data Security Standard&quot;&gt;PCI&lt;/abbr&gt;
+        &lt;/a&gt;
+        and
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/HIPAA&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;abbr title=&quot;Health Insurance Portability and Accountability Act&quot;&gt;
+        HIPAA
+        &lt;/abbr&gt;
+        &lt;/a&gt;,
+        formed the regulatory backdrop
+        for a new generation of
+        &lt;abbr title=&quot;information technology&quot;&gt;IT&lt;/abbr&gt; companies
+        emerging from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Dot-com_bubble&quot; rel=&quot;noopener noreferrer&quot;&gt;dot-com bubble&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;Around the same time,
+        we saw the emergence of ephemeral, distributed infrastructure —
+        what we now call &lt;a href=&quot;https://en.wikipedia.org/wiki/Cloud_computing&quot; rel=&quot;noopener noreferrer&quot;&gt;“Cloud computing”&lt;/a&gt; —
+        a paradigm that made systems more capable but also more complex.&lt;/p&gt;
+        &lt;p&gt;To solve both the regulatory and logistical challenges of the 21&lt;sup&gt;st&lt;/sup&gt; century,
+        our field established best practices around application logging.
+        And many of the same tools and standards are still in use today.&lt;/p&gt;
+        &lt;aside class=&quot;parenthetical&quot;&gt;
+        &lt;p&gt;Just as &lt;code&gt;print&lt;/code&gt; is a poor man’s &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2019/429/&quot; rel=&quot;noopener noreferrer&quot;&gt;debugger&lt;/a&gt;,
+        it’s also a shallow replacement for a proper logging system,
+        with distinct log levels and configurable output settings.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;aside class=&quot;admonition info&quot;&gt;
+        &lt;p&gt;&lt;em&gt;Sarbanes–Oxley&lt;/em&gt; is notable for giving rise to
+        &lt;em&gt;&lt;a href=&quot;https://www.oyez.org/cases/2014/13-7451&quot; rel=&quot;noopener noreferrer&quot;&gt;Yates v. United States&lt;/a&gt;&lt;/em&gt;:
+        a delightful Supreme Court case that asked the question
+        _“Are fish (🐟) tangible objects?”&lt;/p&gt;
+        &lt;p&gt;Although the Court found in a 5 – 4 decision
+        that fish are &lt;em&gt;not&lt;/em&gt;, in fact, “tangible objects” 
+        (for purposes of the statute),
+        we remain unconvinced
+        for the same reasons articulated in
+        &lt;a href=&quot;https://supreme.justia.com/cases/federal/us/574/528/#tab-opinion-3243031&quot; rel=&quot;noopener noreferrer&quot;&gt;Justice Kagan’s dissent&lt;/a&gt;
+        &lt;em&gt;(and pretty much anything written by
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/Claude_Shannon&quot; rel=&quot;noopener noreferrer&quot;&gt;Claude Shannon&lt;/a&gt;,
+        for that matter)&lt;/em&gt;.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;hr&gt;&lt;a id=&quot;get-on-with-it&quot;&gt;&lt;/a&gt;
+        &lt;p&gt;This week on NSHipster,
+        we’re taking a look at
+        &lt;a href=&quot;https://github.com/apple/swift-log&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt;&lt;/a&gt;:
+        a community-driven, open-source standard for logging in Swift.&lt;/p&gt;
+        &lt;p&gt;Developed by the Swift on Server community
+        and endorsed by the
+        &lt;a href=&quot;https://swift.org/server/&quot; rel=&quot;noopener noreferrer&quot;&gt;SSWG (Swift Server Work Group)&lt;/a&gt;,
+        its benefit isn’t limited to use on the server.
+        Indeed,
+        any Swift code intended to be run from the command line
+        would benefit from adopting &lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt;.
+        Read on to learn how.&lt;/p&gt;
+        &lt;aside class=&quot;admonition warning&quot;&gt;
+        &lt;p&gt;&lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt; is distinct from the
+        &lt;a href=&quot;https://developer.apple.com/documentation/os/logging&quot; rel=&quot;noopener noreferrer&quot;&gt;Unified Logging System&lt;/a&gt;
+        (&lt;code&gt;os_log&lt;/code&gt;),
+        which is specific to Apple platforms.&lt;/p&gt;
+        &lt;p&gt;Readers may already be familiar with &lt;code&gt;os_log&lt;/code&gt; and its, &lt;em&gt;*ahem*&lt;/em&gt;
+        &lt;a href=&quot;https://mjtsai.com/blog/2019/03/06/problems-with-os_log/&quot; rel=&quot;noopener noreferrer&quot;&gt;quirks&lt;/a&gt;
+        &lt;em&gt;(a topic for a future article, perhaps)&lt;/em&gt;.
+        But for the uninitiated,
+        all you need to know is that
+        &lt;code&gt;os_log&lt;/code&gt; is for macOS and iOS apps and
+        &lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt; is for everything else.&lt;/p&gt;
+        &lt;p&gt;If you’re interested in learning more about Unified Logging,
+        you can get a quick overview of 
+        by skimming the &lt;a href=&quot;https://developer.apple.com/documentation/os/logging&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;code&gt;os_log&lt;/code&gt; docs&lt;/a&gt;;
+        for an in-depth look,
+        check out
+        &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/721/&quot; rel=&quot;noopener noreferrer&quot;&gt;“Unified Logging and Activity Tracing”&lt;/a&gt;
+        from WWDC 2016
+        and
+        &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2018/405/&quot; rel=&quot;noopener noreferrer&quot;&gt;“Measuring Performance Using Logging”&lt;/a&gt;
+        from WWDC 2018.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;hr&gt;
+        &lt;p&gt;As always,
+        an example would be helpful in guiding our discussion.
+        In the spirit of transparency and nostalgia,
+        let’s imagine writing a Swift program
+        that audits the finances of a ’00s Fortune 500 company.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Auditor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;auditor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Auditor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;defer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auditor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auditor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ftp://&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;/reports&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;xls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;qdf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// poll for changes&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;error: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;An &lt;code&gt;Auditor&lt;/code&gt; type polls for changes to a directory
+        &lt;em&gt;(an FTP server, because remember: it’s 2003)&lt;/em&gt;.
+        Each time a file is added, removed, or changed,
+        its contents are audited for discrepancies.
+        If any financial oddities are encountered,
+        they’re logged using the &lt;code&gt;print&lt;/code&gt; function.
+        The same goes for issues connecting to the FTP,
+        or any other problems the program might encounter —
+        everything’s logged using &lt;code&gt;print&lt;/code&gt;.&lt;/p&gt;
+        &lt;aside class=&quot;parenthetical&quot;&gt;
+        &lt;p&gt;The implementation details aren’t important;
+        only the interface is relevant to our discussion.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;p&gt;Simple enough.
+        We can run it from the command line like so:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;swift run audit
+        &lt;span class=&quot;go&quot;&gt;starting up...
+        ERROR: unable to reconnect to FTP
+        &lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;try again after restarting PC under our desk&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;go&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;swift run audit
+        &lt;span class=&quot;go&quot;&gt;+ connected to FTP server
+        ! accounting discrepancy in balance sheet 
+        ** Quicken database corruption! **
+        ^C
+        shutting down...
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;Such a program might be technically compliant,
+        but it leaves a lot of room for improvement:&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;For one,
+        our output doesn’t have any timestamps associated with it.
+        There’s no way to know whether a problem was detected an hour ago or last week.&lt;/li&gt;
+        &lt;li&gt;Another problem is that our output lacks any coherent structure.
+        At a glance,
+        there’s no straightforward way to isolate program noise from real issues.&lt;/li&gt;
+        &lt;li&gt;Finally, —
+        &lt;em&gt;and this is mostly due to an under-specified example&lt;/em&gt; —
+        it’s unclear how this output is handled.
+        Where is this output going?
+        How is it collected, aggregated, and analyzed?&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;hr&gt;
+        &lt;p&gt;The good news is that
+        all of these problems (and many others) can be solved
+        by adopting a formal logging infrastructure in your project.&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;adopting-swiftlog-in-your-swift-program&quot; href=&quot;#adopting-swiftlog-in-your-swift-program&quot;&gt;&lt;/a&gt;Adopting SwiftLog in Your Swift Program&lt;/h2&gt;
+        &lt;p&gt;Adding &lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt; to an existing Swift package is a breeze.
+        You can incorporate it incrementally
+        without making any fundamental changes to your code
+        and have it working in a matter of minutes.&lt;/p&gt;
+        &lt;h3&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;add-swift-log-as-a-package-dependency&quot; href=&quot;#add-swift-log-as-a-package-dependency&quot;&gt;&lt;/a&gt;Add swift-log as a Package Dependency&lt;/h3&gt;
+        &lt;p&gt;In your &lt;code&gt;Package.swift&lt;/code&gt; manifest,
+        add &lt;code&gt;swift-log&lt;/code&gt; as a package dependency and
+        add the &lt;code&gt;Logging&lt;/code&gt; module to your target’s list of dependencies.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// swift-tools-version:5.1&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Package&lt;wbr&gt;&lt;/wbr&gt;Description&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Package&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Auditor2000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;products&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;executable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;audit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;targets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;dependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://github.com/apple/swift-log.git&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1.2.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;targets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;audit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Logging&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;h3&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;create-a-shared-global-logger&quot; href=&quot;#create-a-shared-global-logger&quot;&gt;&lt;/a&gt;Create a Shared, Global Logger&lt;/h3&gt;
+        &lt;p&gt;&lt;code&gt;Logger&lt;/code&gt; provides two initializers,
+        the simpler of them taking a single &lt;code&gt;label&lt;/code&gt; parameter:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.NSHipster.Auditor2000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;In &lt;a href=&quot;https://en.wikipedia.org/wiki/POSIX&quot; rel=&quot;noopener noreferrer&quot;&gt;POSIX&lt;/a&gt; systems,
+        programs operate on three, predefined
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/Standard_streams&quot; rel=&quot;noopener noreferrer&quot;&gt;streams&lt;/a&gt;:&lt;/p&gt;
+        &lt;table&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt;File Handle&lt;/th&gt;
+        &lt;th&gt;Description&lt;/th&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;stdin&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Standard Input&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;stdout&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Standard Output&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;stderr&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Standard Error&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;p&gt;By default,
+        &lt;code&gt;Logger&lt;/code&gt; uses the built-in &lt;code&gt;Stream&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/code&gt; type
+        to write logged messages to standard output (&lt;code&gt;stdout&lt;/code&gt;).
+        We can override this behavior to instead write to standard error (&lt;code&gt;stderr&lt;/code&gt;)
+        by using the more complex initializer,
+        which takes a &lt;code&gt;factory&lt;/code&gt; parameter:
+        a closure that takes a single &lt;code&gt;String&lt;/code&gt; parameter (the label)
+        and returns an object conforming to &lt;code&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/code&gt;.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.NSHipster.Auditor2000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Stream&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;standard&lt;wbr&gt;&lt;/wbr&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;aside class=&quot;admonition info&quot;&gt;
+        &lt;p&gt;Alternatively,
+        you can set default logger globally
+        using the &lt;code&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;System.bootstrap()&lt;/code&gt; method.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bootstrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Stream&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;standard&lt;wbr&gt;&lt;/wbr&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.NSHipster.Auditor2000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;After doing this,
+        any subsequent &lt;code&gt;Logger&lt;/code&gt; instances created
+        using the &lt;code&gt;Logger(label:)&lt;/code&gt; initializer
+        will default to the specified handler.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;h3&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;replacing-print-statements-with-logging-statements&quot; href=&quot;#replacing-print-statements-with-logging-statements&quot;&gt;&lt;/a&gt;Replacing Print Statements with Logging Statements&lt;/h3&gt;
+        &lt;p&gt;Declaring our &lt;code&gt;logger&lt;/code&gt; as a top-level constant
+        lets us call it anywhere within our module.
+        Let’s revisit our example and spruce it up with our new logger:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;auditor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Auditor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;defer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Shutting down&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;auditor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cleanup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starting up&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auditor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ftp://&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;/reports&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;xls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;qdf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// poll for changes&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;critical&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;The &lt;code&gt;trace&lt;/code&gt;, &lt;code&gt;debug&lt;/code&gt;, and &lt;code&gt;critical&lt;/code&gt; methods
+        log a message at their respective &lt;dfn&gt;log level&lt;/dfn&gt;.
+        &lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt; defines seven levels,
+        ranked in ascending order of severity from &lt;code&gt;trace&lt;/code&gt; to &lt;code&gt;critical&lt;/code&gt;:&lt;/p&gt;
+        &lt;table id=&quot;log-levels&quot;&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt;Level&lt;/th&gt;
+        &lt;th&gt;Description&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr id=&quot;log-level-trace&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.trace&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for messages that contain information only when debugging a program.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id=&quot;log-level-debug&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.debug&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for messages that contain information normally of use only when debugging a program.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id=&quot;log-level-info&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.info&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for informational messages.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id=&quot;log-level-notice&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.notice&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for conditions that are not error conditions, but that may require special handling.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id=&quot;log-level-warning&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.warning&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for messages that are not error conditions, but more severe than &lt;code&gt;.notice&lt;/code&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id=&quot;log-level-error&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.error&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for error conditions.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id=&quot;log-level-critical&quot;&gt;
+        &lt;td&gt;&lt;code&gt;.critical&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;Appropriate for critical error conditions that usually require immediate attention.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;p&gt;If we re-run our &lt;code&gt;audit&lt;/code&gt; example with our new logging framework in place,
+        we can see the immediate benefit of clearly-labeled, distinct severity levels
+        in log lines:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;swift run audit
+        &lt;span class=&quot;go&quot;&gt;2020-03-26T09:40:10-0700 critical: Couldn't connect to ftp://&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;
+        &lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;try again after plugging &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;loose ethernet cord&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;go&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;swift run audit
+        &lt;span class=&quot;go&quot;&gt;2020-03-26T10:21:22-0700 warning: Discrepancy in balance sheet
+        2020-03-26T10:21:22-0700 error: Quicken database corruption
+        ^C
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;Beyond merely labeling messages,
+        &lt;em&gt;which — don’t get us wrong — is sufficient benefit on its own&lt;/em&gt;,
+        log levels provide a configurable level of disclosure.
+        Notice that the messages logged with the &lt;code&gt;trace&lt;/code&gt; method 
+        don’t appear in the example output.
+        That’s because &lt;code&gt;Logger&lt;/code&gt; defaults to showing only messages
+        logged as &lt;code&gt;info&lt;/code&gt; level or higher.&lt;/p&gt;
+        &lt;p&gt;You can configure that by setting the &lt;code&gt;Logger&lt;/code&gt;’s &lt;code&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/code&gt; property.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.NSHipster.Auditor2000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trace&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;After making this change,
+        the example output would instead look something like this:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;swift run audit
+        &lt;span class=&quot;go&quot;&gt;2020-03-25T09:40:00-0700 trace: Starting up
+        2020-03-26T09:40:10-0700 critical: Couldn't connect to ftp://&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;
+        2020-03-25T09:40:11-0700 trace: Shutting down
+        &lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;try again after plugging &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;loose ethernet cord&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;go&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;swift run audit
+        &lt;span class=&quot;go&quot;&gt;2020-03-25T09:41:00-0700 trace: Starting up
+        2020-03-26T09:41:01-0700 debug: Connected to ftp://&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;/reports
+        2020-03-26T09:41:01-0700 debug: Watching file extensions [&quot;xls&quot;, &quot;ods&quot;, &quot;qdf&quot;]
+        2020-03-26T10:21:22-0700 warning: Discrepancy in balance sheet
+        2020-03-26T10:21:22-0700 error: Quicken database corruption
+        ^C
+        2020-03-26T10:30:00-0700 trace: Shutting down
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;using-multiple-logging-handlers-at-once&quot; href=&quot;#using-multiple-logging-handlers-at-once&quot;&gt;&lt;/a&gt;Using Multiple Logging Handlers at Once&lt;/h2&gt;
+        &lt;p&gt;Thinking back to our objections in the original example,
+        the only remaining concern 
+        is the what we actually &lt;em&gt;do&lt;/em&gt; with these logs.&lt;/p&gt;
+        &lt;p&gt;According to &lt;a href=&quot;https://12factor.net/logs&quot; rel=&quot;noopener noreferrer&quot;&gt;12 Factor App&lt;/a&gt; principles:&lt;/p&gt;
+        &lt;blockquote&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;xi-logs&quot; href=&quot;#xi-logs&quot;&gt;&lt;/a&gt;XI. Logs&lt;/h2&gt;
+        &lt;p&gt;&lt;em&gt;[…]&lt;/em&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;A twelve-factor app never concerns itself with 
+        routing or storage of its output stream.&lt;/strong&gt; 
+        It should not attempt to write to or manage logfiles. 
+        Instead, each running process writes its event stream, unbuffered, to &lt;code&gt;stdout&lt;/code&gt;.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;p&gt;Collecting, routing, indexing, and analyzing logs across a distributed system
+        often requires a constellation of open-source libraries and commercial products.
+        Fortunately,
+        most of these components traffic in a shared currency of
+        &lt;a href=&quot;https://en.wikipedia.org/wiki/Syslog&quot; rel=&quot;noopener noreferrer&quot;&gt;syslog&lt;/a&gt; messages —
+        and thanks to
+        &lt;a href=&quot;https://github.com/ianpartridge/swift-log-syslog&quot; rel=&quot;noopener noreferrer&quot;&gt;this package by Ian Partridge&lt;/a&gt;,
+        Swift can, as well.&lt;/p&gt;
+        &lt;p&gt;That said,
+        few engineers have managed to retrieve this information
+        from the likes of &lt;a href=&quot;https://www.splunk.com&quot; rel=&quot;noopener noreferrer&quot;&gt;Splunk&lt;/a&gt;
+        and lived to tell the tale.
+        For us mere mortals,
+        we might prefer
+        &lt;a href=&quot;https://github.com/wlisac/swift-log-slack&quot; rel=&quot;noopener noreferrer&quot;&gt;this package by Will Lisac&lt;/a&gt;,
+        which sends log messages to
+        &lt;a href=&quot;https://slack.com&quot; rel=&quot;noopener noreferrer&quot;&gt;Slack&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;The good news is that we can use both at once,
+        without changing how messages are logged at the call site
+        by using another piece of the &lt;code&gt;Logging&lt;/code&gt; module:
+        &lt;code&gt;Multiplex&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/code&gt;.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Process&lt;wbr&gt;&lt;/wbr&gt;Info&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;Syslog&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;Slack&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;webhook&lt;wbr&gt;&lt;/wbr&gt;URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Process&lt;wbr&gt;&lt;/wbr&gt;Info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;process&lt;wbr&gt;&lt;/wbr&gt;Info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SLACK_LOGGING_WEBHOOK_URL&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;slack&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Slack&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;webhook&lt;wbr&gt;&lt;/wbr&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webhook&lt;wbr&gt;&lt;/wbr&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;slack&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;critical&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;syslog&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Syslog&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Multiplex&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;syslog&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;slack&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.NSHipster.Auditor2000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;aside class=&quot;parenthetical&quot;&gt;
+        &lt;p&gt;Harkening to &lt;a href=&quot;https://12factor.net/config&quot; rel=&quot;noopener noreferrer&quot;&gt;another 12 Factor principle&lt;/a&gt;,
+        we pull the webhook URL from an environment variable rather than hard-coding it.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;p&gt;With all of this in place,
+        our system will log everything in syslog format to standard out (&lt;code&gt;stdout&lt;/code&gt;),
+        where it can be collected and analyzed by some other system.&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;p&gt;But the real strength of this approach to logging
+        is that it can be extended to meet the specific needs of any environment.
+        Instead of writing syslog to &lt;code&gt;stdout&lt;/code&gt; or Slack messages,
+        your system could send emails,
+        open SalesForce tickets,
+        or trigger a webhook to activate some 
+        &lt;abbr title=&quot;Internet of Things&quot;&gt;IoT&lt;/abbr&gt; device.&lt;/p&gt;
+        &lt;aside class=&quot;parenthetical&quot;&gt;
+        &lt;p&gt;Granted, each of those examples would probably be better served
+        by a separate monitoring service that ingests a log stream 
+        and reacts to events according to a more elaborate set of rules.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;p&gt;Here’s how you can extend &lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt; to fit your needs
+        by writing a custom log handler:&lt;/p&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;creating-a-custom-log-handler&quot; href=&quot;#creating-a-custom-log-handler&quot;&gt;&lt;/a&gt;Creating a Custom Log Handler&lt;/h2&gt;
+        &lt;p&gt;The &lt;code&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/code&gt; protocol specifies the requirements for types
+        that can be registered as message handlers by &lt;code&gt;Logger&lt;/code&gt;:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;protocol&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;subscript&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;metadata&lt;wbr&gt;&lt;/wbr&gt;Key&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Metadata&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Metadata&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Level&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?,&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;In the process of writing this article,
+        I created &lt;a href=&quot;https://github.com/NSHipster/swift-log-github-actions&quot; rel=&quot;noopener noreferrer&quot;&gt;custom handler&lt;/a&gt; 
+        that formats log messages for GitHub Actions
+        so that they’re surfaced on GitHub’s UI like so:&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/assets/github-actions-ui-29966d7466f9a4503972d48c1fcf7e37a6c4daab53ca9313a37ef8846d13abf9.png&quot; integrity=&quot;sha256-KZZtdGb5pFA5ctSMH89+N6bE2qtTypMTo374hG0Tq/k=&quot; crossorigin=&quot;anonymous&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+        &lt;aside class=&quot;admonition info&quot;&gt;
+        &lt;p&gt;For more information, 
+        see
+        &lt;a href=&quot;https://help.github.com/en/actions/reference/workflow-commands-for-github-actions&quot; rel=&quot;noopener noreferrer&quot;&gt;“Workflow commands for GitHub Actions.”&lt;/a&gt;&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;p&gt;If you’re interested in making your own logging handler,
+        you can learn a lot by just browsing 
+        &lt;a href=&quot;https://github.com/NSHipster/swift-log-github-actions&quot; rel=&quot;noopener noreferrer&quot;&gt;the code for this project&lt;/a&gt;.
+        But I did want to call out a few points of interest here:&lt;/p&gt;
+        &lt;h3&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;conditional-boostrapping&quot; href=&quot;#conditional-boostrapping&quot;&gt;&lt;/a&gt;Conditional Boostrapping&lt;/h3&gt;
+        &lt;p&gt;When bootstrapping your logging system,
+        you can define some logic for how things are configured.
+        For logging formatters specific to a particular CI vendor,
+        for example, 
+        you might check the environment to see if you’re running locally or on CI
+        and adjust accordingly.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;Git&lt;wbr&gt;&lt;/wbr&gt;Hub&lt;wbr&gt;&lt;/wbr&gt;Actions&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Process&lt;wbr&gt;&lt;/wbr&gt;Info&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Are we running in a Git&lt;wbr&gt;&lt;/wbr&gt;Hub Actions workflow?&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Process&lt;wbr&gt;&lt;/wbr&gt;Info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;process&lt;wbr&gt;&lt;/wbr&gt;Info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GITHUB_ACTIONS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Git&lt;wbr&gt;&lt;/wbr&gt;Hub&lt;wbr&gt;&lt;/wbr&gt;Actions&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;standard&lt;wbr&gt;&lt;/wbr&gt;Output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Stream&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;standard&lt;wbr&gt;&lt;/wbr&gt;Output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;h3&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;testing-custom-log-handlers&quot; href=&quot;#testing-custom-log-handlers&quot;&gt;&lt;/a&gt;Testing Custom Log Handlers&lt;/h3&gt;
+        &lt;p&gt;Testing turned out to be more of a challenge than originally anticipated.
+        I could be missing something obvious,
+        but there doesn’t seem to be a way to create assertions about
+        text written to standard output.
+        So here’s what I did instead:&lt;/p&gt;
+        &lt;p&gt;First,
+        create an &lt;code&gt;internal&lt;/code&gt; initializer that takes a &lt;code&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/code&gt; parameter,
+        and store it in a &lt;code&gt;private&lt;/code&gt; property.&lt;/p&gt;
+        &lt;aside class=&quot;parenthetical&quot;&gt;
+        &lt;p&gt;Swift symbols have &lt;code&gt;internal&lt;/code&gt; access control by default;
+        the keyword is included here for clarity.&lt;/p&gt;
+        &lt;/aside&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Git&lt;wbr&gt;&lt;/wbr&gt;Hub&lt;wbr&gt;&lt;/wbr&gt;Actions&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;internal&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;&lt;var class=&quot;placeholder&quot;&gt;…&lt;/var&gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;Then, 
+        in the test target,
+        create a type that adopts &lt;code&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/code&gt;
+        and collects logged messages to a stored property
+        for later inspection.
+        By using a 
+        &lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID5&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;code&gt;@testable import&lt;/code&gt;&lt;/a&gt; 
+        of the module declaring &lt;code&gt;Git&lt;wbr&gt;&lt;/wbr&gt;Hub&lt;wbr&gt;&lt;/wbr&gt;Actions&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/code&gt;,
+        we can access that &lt;code&gt;internal&lt;/code&gt; initializer from before,
+        and pass an instance of &lt;code&gt;Mock&lt;wbr&gt;&lt;/wbr&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/code&gt; to intercept logged messages.&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;@testable&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logging&lt;wbr&gt;&lt;/wbr&gt;Git&lt;wbr&gt;&lt;/wbr&gt;Hub&lt;wbr&gt;&lt;/wbr&gt;Actions&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Mock&lt;wbr&gt;&lt;/wbr&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;private(set)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;#file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Git&lt;wbr&gt;&lt;/wbr&gt;Hub&lt;wbr&gt;&lt;/wbr&gt;Actions&lt;wbr&gt;&lt;/wbr&gt;Log&lt;wbr&gt;&lt;/wbr&gt;Handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// MARK: - Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;With these pieces in place,
+        we can finally test that our handler works as expected:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;wbr&gt;&lt;/wbr&gt;Logging&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;expectation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Mock&lt;wbr&gt;&lt;/wbr&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🥱&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;😱&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;XCTAssert&lt;wbr&gt;&lt;/wbr&gt;Greater&lt;wbr&gt;&lt;/wbr&gt;Than&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;wbr&gt;&lt;/wbr&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;XCTAssert&lt;wbr&gt;&lt;/wbr&gt;Equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expectation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// trace log is ignored&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;XCTAssert&lt;wbr&gt;&lt;/wbr&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expectation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;has&lt;wbr&gt;&lt;/wbr&gt;Prefix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;::error &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;XCTAssert&lt;wbr&gt;&lt;/wbr&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expectation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;has&lt;wbr&gt;&lt;/wbr&gt;Suffix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;::😱&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;aside class=&quot;admonition warning&quot;&gt;
+        &lt;p&gt;As to how or where messages are logged,
+        &lt;code&gt;Swift&lt;wbr&gt;&lt;/wbr&gt;Log&lt;/code&gt; is surprisingly tight-lipped.
+        There’s &lt;a href=&quot;https://github.com/apple/swift-log/blob/0e21dd789300fc37a43019fba68b4e97c9938142/Sources/Logging/Logging.swift#L524-L550&quot; rel=&quot;noopener noreferrer&quot;&gt;an internal type&lt;/a&gt; that buffers writes to &lt;code&gt;stdout&lt;/code&gt;,
+        but it’s not exposed by the module.&lt;/p&gt;
+        &lt;p&gt;If you’re in search for a replacement
+        and would prefer not to copy-paste something as involved as that,
+        here’s a dead-simple alternative:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Swift&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Standard&lt;wbr&gt;&lt;/wbr&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;wbr&gt;&lt;/wbr&gt;Output&lt;wbr&gt;&lt;/wbr&gt;Stream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;mutating&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;/aside&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; integrity=&quot;sha256-GtLanAQWk2RePAe438jnWEiTKYLV0wQgYGB2siWUD1k=&quot; crossorigin=&quot;anonymous&quot; href=&quot;/assets/articles/swift-log-1ad2da9c041693645e3c07b8dfc8e75848932982d5d30420606076b225940f59.css&quot;&gt;
+      </content>
+      <author>
+        <name>Mattt</name>
+        <email>mattt@nshipster.com</email>
+        <uri>https://nshipster.com/authors/mattt/</uri>
+      </author>
+      <category term="Swift" />
+      <summary type="html">&lt;p&gt;Developed by the Swift on Server community, its benefit isn’t limited to use on the server. Indeed, any Swift code intended to be run from the command line would benefit from adopting SwiftLog.&lt;/p&gt;</summary>
+    </entry>
