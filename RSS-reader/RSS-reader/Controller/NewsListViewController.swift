@@ -25,13 +25,20 @@ class NewsListViewController: UIViewController {
     }
     
     func loadNewsList() {
-        //api request
         
-        //tableView?.reloadTable()
     }
     
     func loadFromUrl() {
-        
+        AppApi().sendRequest(url: "https://developer.apple.com/news/rss/news.rss",
+                         params: nil,
+                         handler: { (responseString, success) in
+                            if success {
+                                let newsParser = NewsParser(withXML: responseString as? String ?? "")
+                                self.newsList = newsParser.parse()
+                            } else {
+                                print(responseString)
+                            }
+        })
     }
     
     func loadFromFile() {
