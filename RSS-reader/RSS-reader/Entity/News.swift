@@ -11,17 +11,20 @@ import Foundation
 
 class News {
     var       title: String
-    var       imageUri: String?
+    var        link: String
+    var    imageUrl: String?
     var description: String
     
     init() {
         self.title = ""
+        self.link = ""
         self.description = ""
     }
     
-    init(title: String, image: String? = nil, description: String) {
+    init(title: String, link: String, image: String? = nil, description: String) {
         self.title = title
-        self.imageUri = image
+        self.link = link
+        self.imageUrl = image
         self.description = description
     }
 }
@@ -65,11 +68,14 @@ extension NewsParser: XMLParserDelegate {
         if elementName == "title" {
             currentNews?.title = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
+        if elementName == "link" {
+            currentNews?.link = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        }
         if (elementName == "description" || elementName ==  "content") {
             currentNews?.description = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
         if elementName == "image" {
-            currentNews?.description = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            currentNews?.imageUrl = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
         
         if (elementName == "item" || elementName == "entry") {

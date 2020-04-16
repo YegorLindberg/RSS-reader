@@ -11,7 +11,11 @@ import UIKit
 
 class NewsListViewController: UIViewController {
     
-    var newsList: [News] = []
+    var newsList: [News] = [] {
+        didSet {
+            self.tableView?.reloadData()
+        }
+    }
 
     @IBOutlet var tableView: UITableView?
     
@@ -22,17 +26,24 @@ class NewsListViewController: UIViewController {
     
     func loadNewsList() {
         //api request
+        
+        //tableView?.reloadTable()
+    }
+    
+    func loadFromUrl() {
+        
+    }
+    
+    func loadFromFile() {
         do {
             if let xmlUrl = Bundle.main.url(forResource: "news", withExtension: "xml") {
                 let xml = try String(contentsOf: xmlUrl)
                 let newsParser = NewsParser(withXML: xml)
                 newsList = newsParser.parse()
-                
             }
         } catch {
             print(error)
         }
-        //tableView?.reloadTable()
     }
 
 }
