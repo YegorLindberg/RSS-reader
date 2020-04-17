@@ -7,6 +7,9 @@
 /* Class = "UIViewController"; title = "News List"; ObjectID = "BYZ-38-t0r"; */
 "BYZ-38-t0r.title" = "Новости";
 
+/* Class = "UIButton"; normalTitle = "Go to full news version"; ObjectID = "ifM-pK-TXF"; */
+"ifM-pK-TXF.normalTitle" = "Перейти на веб-версию";
+
 /* Class = "UINavigationItem"; title = "RSS List"; ObjectID = "jvZ-6S-GxA"; */
 "jvZ-6S-GxA.title" = "Список RSS";
 
