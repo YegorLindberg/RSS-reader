@@ -14,6 +14,8 @@ class NewsDetailsViewController: UIViewController {
     @IBOutlet var newsImageView: UIImageView?
     @IBOutlet var headerNewsLabel: UILabel?
     @IBOutlet var textNewsLabel: UILabel?
+    @IBOutlet var authorLabel: UILabel?
+    @IBOutlet var pubDateLabel: UILabel?
     
     var news: News?
     
@@ -27,14 +29,30 @@ class NewsDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareInterface()
+    }
+    
+    func prepareInterface() {
         navigationItem.title = "News Details"
         newsImageView?.sd_setImage(with: URL(string: news?.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
         headerNewsLabel?.text = news?.title
         textNewsLabel?.text = news?.description
+        let emptyAuthorStr = NSLocalizedString("Unnamed", comment: "Empty Auhor")
+        let emptyPubDateStr = NSLocalizedString("Not specified", comment: "Empty PubDate")
+        authorLabel?.text = NSLocalizedString("Author: " + (news?.author ?? emptyAuthorStr), comment: "News author")
+        pubDateLabel?.text = NSLocalizedString("Publication date: " + (news?.pubDate ?? emptyPubDateStr), comment: "News pubdate")
     }
     
+    @IBAction func onHeaderNewsTapped(_ sender: UITapGestureRecognizer) {
+        tryOpenWebView()
+    }
     
-    @IBAction func fullVersionNewsButtonTapped(_ sender: UIButton) {
+    @IBAction func onFullVersionNewsButtonTapped(_ sender: UIButton) {
+        tryOpenWebView()
+    }
+    
+    @objc
+    func tryOpenWebView() {
         if (news?.link != "") && (news?.link != nil) {
             if let viewController = WebViewViewController.make(link: news!.link) {
                 self.navigationController?.pushViewController(viewController, animated: true)

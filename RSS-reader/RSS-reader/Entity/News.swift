@@ -14,6 +14,8 @@ class News: Equatable {
     var        link: String
     var    imageUrl: String?
     var description: String
+    var     pubDate: String?
+    var      author: String?
     
     static func == (lhs: News, rhs: News) -> Bool {
         return lhs.link == rhs.link
@@ -53,6 +55,7 @@ class NewsParser: NSObject {
     }
 }
 
+//MARK: - XML Parser
 extension NewsParser: XMLParserDelegate {
     func parser(_ parser: XMLParser,
                 didStartElement elementName: String,
@@ -80,6 +83,12 @@ extension NewsParser: XMLParserDelegate {
         }
         if elementName == "image" {
             currentNews?.imageUrl = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        }
+        if elementName == "pubDate" {
+            currentNews?.pubDate = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        }
+        if elementName == "author" {
+            currentNews?.author = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
         
         if (elementName == "item" || elementName == "entry") {

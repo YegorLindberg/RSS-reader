@@ -15,7 +15,23 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareInterface()
+    }
+    
+    func prepareInterface() {
         urlTextField?.text = App.appManagement.mainRSSUrl
+        addDismissKeyBoardGesture()
+    }
+    
+    func addDismissKeyBoardGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func changeRSSUrlButtonTapped(_ sender: UIButton) {
