@@ -31,8 +31,11 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reloadNewsList()
         tableView?.refreshControl = refresher
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadNewsList()
     }
     
     @objc
@@ -108,6 +111,5 @@ extension NewsListViewController: UITableViewDataSource {
         
         return cell
     }
-    
     
 }
