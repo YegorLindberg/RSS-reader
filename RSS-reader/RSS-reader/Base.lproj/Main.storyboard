@@ -193,17 +193,42 @@
         <!--Web View-->
         <scene sceneID="BMZ-Zg-Lfh">
             <objects>
-                <viewController storyboardIdentifier="WebViewVC" title="Web View" id="l9b-bu-N64" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewVC" title="Web View" id="l9b-bu-N64" customClass="WebViewViewController" customModule="RSS_reader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yxr-gx-Xa5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83v-Em-VMQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qXR-K1-CoE">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DDe-P4-AQs" firstAttribute="trailing" secondItem="83v-Em-VMQ" secondAttribute="trailing" id="7NX-ba-6GO"/>
+                            <constraint firstItem="qXR-K1-CoE" firstAttribute="centerX" secondItem="DDe-P4-AQs" secondAttribute="centerX" id="E9J-WS-fA9"/>
+                            <constraint firstItem="qXR-K1-CoE" firstAttribute="centerY" secondItem="DDe-P4-AQs" secondAttribute="centerY" id="Gfu-MW-pbG"/>
+                            <constraint firstItem="DDe-P4-AQs" firstAttribute="bottom" secondItem="83v-Em-VMQ" secondAttribute="bottom" id="NWD-WR-S0S"/>
+                            <constraint firstItem="83v-Em-VMQ" firstAttribute="leading" secondItem="DDe-P4-AQs" secondAttribute="leading" id="O70-VC-I5i"/>
+                            <constraint firstItem="83v-Em-VMQ" firstAttribute="top" secondItem="DDe-P4-AQs" secondAttribute="top" id="wzL-ld-1hw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DDe-P4-AQs"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="qXR-K1-CoE" id="6oR-Am-mKd"/>
+                        <outlet property="webView" destination="83v-Em-VMQ" id="aru-fe-sbs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuw-3t-pPG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="81"/>
+            <point key="canvasLocation" x="2799" y="86"/>
         </scene>
         <!--Settings-->
         <scene sceneID="j0v-gB-39z">

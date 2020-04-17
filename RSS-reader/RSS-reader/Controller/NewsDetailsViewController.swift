@@ -15,7 +15,6 @@ class NewsDetailsViewController: UIViewController {
     @IBOutlet var headerNewsLabel: UILabel?
     @IBOutlet var textNewsLabel: UILabel?
     
-    
     var news: News?
     
     static public func make(news: News) -> NewsDetailsViewController? {
@@ -36,6 +35,15 @@ class NewsDetailsViewController: UIViewController {
     
     
     @IBAction func fullVersionNewsButtonTapped(_ sender: UIButton) {
+        if (news?.link != "") && (news?.link != nil) {
+            if let viewController = WebViewViewController.make(link: news!.link) {
+                self.navigationController?.pushViewController(viewController, animated: true)
+            } else {
+                print("Error of pushing WebViewViewController")
+            }
+        } else {
+            print(" --- Link is uncorrect")
+        }
     }
     
 }
