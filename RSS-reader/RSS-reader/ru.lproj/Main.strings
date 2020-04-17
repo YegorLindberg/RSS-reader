@@ -1,0 +1,30 @@
+/* Class = "UIButton"; normalTitle = "Change RSS flow!"; ObjectID = "4sP-ul-eBE"; */
+"4sP-ul-eBE.normalTitle" = "Изменить RSS поток!";
+
+/* Class = "UITextField"; placeholder = "Enter RSS-flow"; ObjectID = "aS7-ez-vWX"; */
+"aS7-ez-vWX.placeholder" = "Введите Url RSS-потока";
+
+/* Class = "UIViewController"; title = "News List"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Новости";
+
+/* Class = "UINavigationItem"; title = "RSS List"; ObjectID = "jvZ-6S-GxA"; */
+"jvZ-6S-GxA.title" = "Список RSS";
+
+/* Class = "UILabel"; text = "Description NewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCell"; ObjectID = "KeP-CL-HQC"; */
+"KeP-CL-HQC.text" = "Description NewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCell";
+
+/* Class = "UIViewController"; title = "Settings"; ObjectID = "Kir-9Q-4kP"; */
+"Kir-9Q-4kP.title" = "Настройки";
+
+/* Class = "UILabel"; text = "Header"; ObjectID = "Kvk-Rv-VnM"; */
+"Kvk-Rv-VnM.text" = "Header";
+
+/* Class = "UIViewController"; title = "Web View"; ObjectID = "l9b-bu-N64"; */
+"l9b-bu-N64.title" = "Веб-версия";
+
+/* Class = "UIViewController"; title = "News Deatils"; ObjectID = "lVO-Gy-Uoj"; */
+"lVO-Gy-Uoj.title" = "Детали новости";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Tlh-y9-TdJ"; */
+"Tlh-y9-TdJ.title" = "Настройки";
+

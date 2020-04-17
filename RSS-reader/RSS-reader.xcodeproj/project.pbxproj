@@ -19,6 +19,7 @@
 		5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F624477C1700D5D21B /* NewsDetailsViewController.swift */; };
 		5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F824477C2E00D5D21B /* WebViewViewController.swift */; };
 		5C36180D244897FC0098D741 /* news.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5C36180C244897FC0098D741 /* news.xml */; };
+		5C38F412244A101D00664B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C38F410244A101D00664B06 /* InfoPlist.strings */; };
 		5C3F17942448DDD400DF6855 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F17932448DDD400DF6855 /* App.swift */; };
 		5C3F17972448E38F00DF6855 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F17962448E38F00DF6855 /* ArrayExtension.swift */; };
 		5C8F919C2448BFFB000D15C1 /* AppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F919B2448BFFB000D15C1 /* AppApi.swift */; };
@@ -41,6 +42,8 @@
 		5C0941F624477C1700D5D21B /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		5C0941F824477C2E00D5D21B /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		5C36180C244897FC0098D741 /* news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = news.xml; sourceTree = "<group>"; };
+		5C38F40F244A099800664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		5C38F411244A101D00664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C3F17932448DDD400DF6855 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5C3F17962448E38F00DF6855 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		5C8F919B2448BFFB000D15C1 /* AppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApi.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 				5C0941DE24475B1300D5D21B /* Assets.xcassets */,
 				5C0941E024475B1300D5D21B /* LaunchScreen.storyboard */,
 				5C0941E324475B1300D5D21B /* Info.plist */,
+				5C38F410244A101D00664B06 /* InfoPlist.strings */,
 				5C36180C244897FC0098D741 /* news.xml */,
 			);
 			path = "RSS-reader";
@@ -201,6 +205,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5C0941C924475B1100D5D21B;
 			productRefGroup = 5C0941D324475B1100D5D21B /* Products */;
@@ -221,6 +226,7 @@
 				5C0941E224475B1300D5D21B /* LaunchScreen.storyboard in Resources */,
 				5C0941DF24475B1300D5D21B /* Assets.xcassets in Resources */,
 				5C0941DD24475B1100D5D21B /* Main.storyboard in Resources */,
+				5C38F412244A101D00664B06 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +283,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5C0941DC24475B1100D5D21B /* Base */,
+				5C38F40F244A099800664B06 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -289,6 +296,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		5C38F410244A101D00664B06 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C38F411244A101D00664B06 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -296,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -342,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -356,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -396,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

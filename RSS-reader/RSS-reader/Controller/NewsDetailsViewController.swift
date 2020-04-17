@@ -11,6 +11,11 @@ import UIKit
 
 class NewsDetailsViewController: UIViewController {
     
+    @IBOutlet var newsImageView: UIImageView?
+    @IBOutlet var headerNewsLabel: UILabel?
+    @IBOutlet var textNewsLabel: UILabel?
+    
+    
     var news: News?
     
     static public func make(news: News) -> NewsDetailsViewController? {
@@ -23,9 +28,14 @@ class NewsDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = news?.title ?? "News Details"
+        navigationItem.title = "News Details"
+        newsImageView?.sd_setImage(with: URL(string: news?.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        headerNewsLabel?.text = news?.title
+        textNewsLabel?.text = news?.description
     }
     
     
-
+    @IBAction func fullVersionNewsButtonTapped(_ sender: UIButton) {
+    }
+    
 }
