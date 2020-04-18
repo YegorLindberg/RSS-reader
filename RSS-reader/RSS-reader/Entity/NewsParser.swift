@@ -52,7 +52,7 @@ extension NewsParser: XMLParserDelegate {
             currentNews?.link = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
         if (elementName == "description") || (elementName ==  "content") {
-            currentNews?.description = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            currentNews?.newsDescription = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
         if elementName == "image" {
             currentNews?.imageUrl = xmlText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

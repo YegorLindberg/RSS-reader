@@ -36,7 +36,7 @@ class NewsDetailsViewController: UIViewController {
         navigationItem.title = "News Details"
         newsImageView?.sd_setImage(with: URL(string: news.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
         headerNewsLabel?.text = news.title
-        textNewsLabel?.text = news.description
+        textNewsLabel?.text = news.newsDescription
         
         let emptyAuthorStr = NSLocalizedString("Unnamed", comment: "Empty Auhor")
         let emptyPubDateStr = NSLocalizedString("Not specified", comment: "Empty PubDate")
@@ -44,10 +44,7 @@ class NewsDetailsViewController: UIViewController {
         let authorName: String = (news.author.name == "") ? emptyAuthorStr : news.author.name
         authorLabel?.text = NSLocalizedString("Author: " + (authorName), comment: "News author")
         
-        var localizedPubDateStr = ""
-        if let newsPubDate = news.dateTime {
-            localizedPubDateStr = newsPubDate.toString(dateFormat: "yyyy-MM-dd HH:mm:ss")
-        }
+        let localizedPubDateStr = news.dateTime?.toString(dateFormat: "yyyy-MM-dd HH:mm:ss") ?? ""
         pubDateLabel?.text = NSLocalizedString("Publication date: " + (localizedPubDateStr == "" ? emptyPubDateStr : localizedPubDateStr), comment: "News pubdate")
     }
     

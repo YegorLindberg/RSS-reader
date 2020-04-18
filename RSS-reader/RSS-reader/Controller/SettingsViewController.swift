@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
     }
     
     func prepareInterface() {
-        urlTextField?.text = App.appManagement.mainRSSUrl
+        urlTextField?.text = App.management.mainRSSUrl
         addDismissKeyBoardGesture()
     }
     
@@ -60,7 +60,7 @@ class SettingsViewController: UIViewController {
     func checkForValidRSSFlow() {
         checkedNewsList.removeDuplicates()
         if checkedNewsList.count > 0 {
-            App.appManagement.mainRSSUrl = self.newUrl
+            App.management.mainRSSUrl = self.newUrl
             self.view.endEditing(true)
             print(" +++ RSS-flow was changed to: " + self.newUrl)
         } else {

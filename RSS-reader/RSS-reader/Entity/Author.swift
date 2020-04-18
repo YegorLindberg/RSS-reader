@@ -13,4 +13,12 @@ class Author {
     var  name = ""
     var email = ""
     var   uri = ""
+    
+    init() {}
+    
+    init(name: String, email: String, uri: String) {
+        self.name = name
+        self.email = email
+        self.uri = uri
+    }
 }

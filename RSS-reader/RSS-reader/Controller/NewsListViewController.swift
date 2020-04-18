@@ -53,7 +53,7 @@ class NewsListViewController: UIViewController {
     }
     
     func loadFromUrl() {
-        AppApi().sendRequest(url: App.appManagement.mainRSSUrl,
+        AppApi().sendRequest(url: App.management.mainRSSUrl,
                          params: nil,
                          handler: { (responseString, success) in
                             if success {
@@ -63,6 +63,14 @@ class NewsListViewController: UIViewController {
                                 print(responseString)
                             }
         })
+    }
+    
+    func loadFromCoreData() {
+        guard let cachedNews = try! App.management.context.fetch(CachedNews.fetchRequest()) as? [CachedNews]
+            else { return }
+        cachedNews.forEach { (cachedNews) in
+            print(cachedNews.title)
+        }
     }
     
     func loadFromFile() -> [News] {
@@ -104,7 +112,7 @@ extension NewsListViewController: UITableViewDataSource {
         }
         let news = newsList[indexPath.row]
         cell.titleLabel?.text = news.title
-        cell.descriptionLabel?.text = news.description
+        cell.descriptionLabel?.text = news.newsDescription
         if let imageUrl = news.imageUrl {
             cell.imageView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
         }
