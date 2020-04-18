@@ -17,7 +17,7 @@ class NewsDetailsViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel?
     @IBOutlet var pubDateLabel: UILabel?
     
-    var news: News?
+    var news = News()
     
     static public func make(news: News) -> NewsDetailsViewController? {
         guard let controller = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsDeatilsVC") as? NewsDetailsViewController else {
@@ -34,13 +34,14 @@ class NewsDetailsViewController: UIViewController {
     
     func prepareInterface() {
         navigationItem.title = "News Details"
-        newsImageView?.sd_setImage(with: URL(string: news?.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
-        headerNewsLabel?.text = news?.title
-        textNewsLabel?.text = news?.description
+        newsImageView?.sd_setImage(with: URL(string: news.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        headerNewsLabel?.text = news.title
+        textNewsLabel?.text = news.description
         let emptyAuthorStr = NSLocalizedString("Unnamed", comment: "Empty Auhor")
         let emptyPubDateStr = NSLocalizedString("Not specified", comment: "Empty PubDate")
-        authorLabel?.text = NSLocalizedString("Author: " + (news?.author ?? emptyAuthorStr), comment: "News author")
-        pubDateLabel?.text = NSLocalizedString("Publication date: " + (news?.pubDate ?? emptyPubDateStr), comment: "News pubdate")
+        let authorName: String = (news.author.name == "") ? emptyAuthorStr : news.author.name
+        authorLabel?.text = NSLocalizedString("Author: " + (authorName), comment: "News author")
+        pubDateLabel?.text = NSLocalizedString("Publication date: " + (news.pubDate == "" ? emptyPubDateStr : news.pubDate), comment: "News pubdate")
     }
     
     @IBAction func onHeaderNewsTapped(_ sender: UITapGestureRecognizer) {
@@ -53,14 +54,14 @@ class NewsDetailsViewController: UIViewController {
     
     @objc
     func tryOpenWebView() {
-        if (news?.link != "") && (news?.link != nil) {
-            if let viewController = WebViewViewController.make(link: news!.link) {
+        if news.link != "" {
+            if let viewController = WebViewViewController.make(link: news.link) {
                 self.navigationController?.pushViewController(viewController, animated: true)
             } else {
                 print("Error of pushing WebViewViewController")
             }
         } else {
-            print(" --- Link is uncorrect")
+            print(" --- Link is empty")
         }
     }
     

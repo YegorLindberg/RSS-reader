@@ -12,6 +12,9 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet var urlTextField: UITextField?
+    var newUrl = ""
+    
+    private var checkedNewsList: [News] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,22 +38,33 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func changeRSSUrlButtonTapped(_ sender: UIButton) {
-        /*TODO: request by new URL and parse result
-         if result.isSuccess, then add new url to singleTone
-        */
         if let newUrl = urlTextField?.text {
-            //        AppApi().sendRequest(url: newUrl,
-            //                         params: nil,
-            //                         handler: { (responseString, success) in
-            //                            if success {
-            //                                let newsParser = NewsParser(withXML: responseString as? String ?? "")
-            //                                self.newsList = newsParser.parse()
-            //                            } else {
-            //                                print(responseString)
-            //                            }
-            //        })
+            self.newUrl = newUrl
+            AppApi().sendRequest(url: newUrl,
+                             params: nil,
+                             handler: { (responseString, success) in
+                                if success {
+                                    let newsParser = NewsParser(withXML: responseString as? String ?? "")
+                                    self.checkedNewsList = newsParser.parse()
+                                    self.checkForValidRSSFlow()
+                                } else {
+                                    print(responseString)
+                                    print("\n --- Invalid RSS-flow")
+                                }
+            })
         } else {
-            print("Invalid URL")
+            print(" --- Invalid URL")
+        }
+    }
+    
+    func checkForValidRSSFlow() {
+        checkedNewsList.removeDuplicates()
+        if checkedNewsList.count > 0 {
+            App.appManagement.mainRSSUrl = self.newUrl
+            self.view.endEditing(true)
+            print(" +++ RSS-flow was changed to: " + self.newUrl)
+        } else {
+            print(" --- Invalid RSS-flow. Currently finded 0(zero) news for this flow.")
         }
     }
 }

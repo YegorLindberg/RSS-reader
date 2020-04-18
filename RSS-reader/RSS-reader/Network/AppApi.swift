@@ -18,7 +18,7 @@ class AppApi {
         isLoding = true
         Alamofire.request(url, method: .get, parameters: params ?? [:]).responseData(completionHandler: { (response) in
             let stringResponse: String = String(data: response.data ?? Data(), encoding: String.Encoding.utf8) ?? response.result.description
-            debugPrint(stringResponse)
+//            debugPrint(stringResponse)
             handler(stringResponse, response.result.isSuccess)
             self.isLoding = false
         })

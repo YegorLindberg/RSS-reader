@@ -17,6 +17,8 @@
 		5C0941F524477BF500D5D21B /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F424477BF500D5D21B /* NewsListViewController.swift */; };
 		5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F624477C1700D5D21B /* NewsDetailsViewController.swift */; };
 		5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F824477C2E00D5D21B /* WebViewViewController.swift */; };
+		5C230463244B5DC200F4A9D5 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230462244B5DC200F4A9D5 /* Author.swift */; };
+		5C230465244B5F0800F4A9D5 /* NewsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230464244B5F0800F4A9D5 /* NewsParser.swift */; };
 		5C36180D244897FC0098D741 /* news.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5C36180C244897FC0098D741 /* news.xml */; };
 		5C38F412244A101D00664B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C38F410244A101D00664B06 /* InfoPlist.strings */; };
 		5C38F414244A214E00664B06 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C38F413244A214E00664B06 /* WebKit.framework */; };
@@ -41,6 +43,8 @@
 		5C0941F424477BF500D5D21B /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		5C0941F624477C1700D5D21B /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		5C0941F824477C2E00D5D21B /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		5C230462244B5DC200F4A9D5 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		5C230464244B5F0800F4A9D5 /* NewsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsParser.swift; sourceTree = "<group>"; };
 		5C36180C244897FC0098D741 /* news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = news.xml; sourceTree = "<group>"; };
 		5C38F40F244A099800664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5C38F411244A101D00664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				5C0941EE244775C200D5D21B /* News.swift */,
+				5C230462244B5DC200F4A9D5 /* Author.swift */,
+				5C230464244B5F0800F4A9D5 /* NewsParser.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -272,8 +278,10 @@
 				5C3F17942448DDD400DF6855 /* App.swift in Sources */,
 				5C0941EF244775C200D5D21B /* News.swift in Sources */,
 				5C0941F524477BF500D5D21B /* NewsListViewController.swift in Sources */,
+				5C230463244B5DC200F4A9D5 /* Author.swift in Sources */,
 				5C0941D824475B1100D5D21B /* SceneDelegate.swift in Sources */,
 				5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */,
+				5C230465244B5F0800F4A9D5 /* NewsParser.swift in Sources */,
 				5C0941F324477BE600D5D21B /* SettingsViewController.swift in Sources */,
 				5C8F919C2448BFFB000D15C1 /* AppApi.swift in Sources */,
 				5C3F17972448E38F00DF6855 /* ArrayExtension.swift in Sources */,
