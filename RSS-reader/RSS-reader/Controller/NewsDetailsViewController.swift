@@ -37,11 +37,18 @@ class NewsDetailsViewController: UIViewController {
         newsImageView?.sd_setImage(with: URL(string: news.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
         headerNewsLabel?.text = news.title
         textNewsLabel?.text = news.description
+        
         let emptyAuthorStr = NSLocalizedString("Unnamed", comment: "Empty Auhor")
         let emptyPubDateStr = NSLocalizedString("Not specified", comment: "Empty PubDate")
+        
         let authorName: String = (news.author.name == "") ? emptyAuthorStr : news.author.name
         authorLabel?.text = NSLocalizedString("Author: " + (authorName), comment: "News author")
-        pubDateLabel?.text = NSLocalizedString("Publication date: " + (news.pubDate == "" ? emptyPubDateStr : news.pubDate), comment: "News pubdate")
+        
+        var localizedPubDateStr = ""
+        if let newsPubDate = news.dateTime {
+            localizedPubDateStr = newsPubDate.toString(dateFormat: "yyyy-MM-dd HH:mm:ss")
+        }
+        pubDateLabel?.text = NSLocalizedString("Publication date: " + (localizedPubDateStr == "" ? emptyPubDateStr : localizedPubDateStr), comment: "News pubdate")
     }
     
     @IBAction func onHeaderNewsTapped(_ sender: UITapGestureRecognizer) {

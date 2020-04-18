@@ -14,14 +14,13 @@ class News: Equatable {
     var        link = ""
     var     imageUrl: String?
     var description = ""
+    var     dateTime: Date?
+    var      author = Author()
     var     pubDate = "" {
         didSet {
-            
+            getDateFromString()
         }
     }
-    var     author = Author()
-    
-    var formatter = DateFormatter()
     
     static func == (lhs: News, rhs: News) -> Bool {
         return lhs.link == rhs.link
@@ -36,5 +35,7 @@ class News: Equatable {
         self.description = description
     }
     
-    
+    func getDateFromString() {
+        self.dateTime = Date.dateFromRFC822String(RFC822String: pubDate)
+    }
 }

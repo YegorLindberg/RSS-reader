@@ -19,6 +19,7 @@
 		5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0941F824477C2E00D5D21B /* WebViewViewController.swift */; };
 		5C230463244B5DC200F4A9D5 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230462244B5DC200F4A9D5 /* Author.swift */; };
 		5C230465244B5F0800F4A9D5 /* NewsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230464244B5F0800F4A9D5 /* NewsParser.swift */; };
+		5C230467244B75F400F4A9D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230466244B75F400F4A9D5 /* DateExtension.swift */; };
 		5C36180D244897FC0098D741 /* news.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5C36180C244897FC0098D741 /* news.xml */; };
 		5C38F412244A101D00664B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C38F410244A101D00664B06 /* InfoPlist.strings */; };
 		5C38F414244A214E00664B06 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C38F413244A214E00664B06 /* WebKit.framework */; };
@@ -45,6 +46,7 @@
 		5C0941F824477C2E00D5D21B /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		5C230462244B5DC200F4A9D5 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		5C230464244B5F0800F4A9D5 /* NewsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsParser.swift; sourceTree = "<group>"; };
+		5C230466244B75F400F4A9D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5C36180C244897FC0098D741 /* news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = news.xml; sourceTree = "<group>"; };
 		5C38F40F244A099800664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5C38F411244A101D00664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5C3F17962448E38F00DF6855 /* ArrayExtension.swift */,
+				5C230466244B75F400F4A9D5 /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				5C0941D624475B1100D5D21B /* AppDelegate.swift in Sources */,
 				5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */,
+				5C230467244B75F400F4A9D5 /* DateExtension.swift in Sources */,
 				5C0941ED2447759200D5D21B /* NewsTableViewCell.swift in Sources */,
 				5C3F17942448DDD400DF6855 /* App.swift in Sources */,
 				5C0941EF244775C200D5D21B /* News.swift in Sources */,
