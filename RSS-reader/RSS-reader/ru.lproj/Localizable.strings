@@ -4,14 +4,26 @@
 /* Dismiss title */
 "Dismiss" = "Закрыть";
 
+/* Error */
+"Error" = "Ошибка";
+
+/* Error loading data. Showing only cached posts. */
+"Error loading data. Showing only cached posts." = "Ошибка загрузки данных. Показываются только закешированные записи.";
+
 /* Invalid RSS-flow. Check for mistakes */
 "Invalid RSS-flow. Check for mistakes" = "Неверный RSS-поток. Проверьте правильность написания";
 
 /* Invalid URL */
 "Invalid URL" = "Неверный URL";
 
+/* Link is empty */
+"Link is empty" = "Ссылка на пост отсутствует :(";
+
 /* Empty PubDate */
 "Not specified" = "Не определено";
+
+/* News pubdate */
+"Publication date: " = "Дата публикации: ";
 
 /* RSS flow successfully changed */
 "RSS flow successfully changed" = "RSS поток был успешно изменен";

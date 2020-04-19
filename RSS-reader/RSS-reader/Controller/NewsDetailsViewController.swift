@@ -75,6 +75,9 @@ class NewsDetailsViewController: BaseViewController {
                 print("Error of pushing WebViewViewController")
             }
         } else {
+            let title = NSLocalizedString("Error", comment: "Error")
+            let message = NSLocalizedString("Link is empty", comment: "Link is empty")
+            self.showAlert(with: message, title: title)
             print(" --- Link is empty")
         }
     }

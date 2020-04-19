@@ -48,14 +48,15 @@ class NewsListViewController: BaseViewController {
                                 App.management.newsList = self.newsList
                                 self.tableView?.reloadData()
                             } else {
-                                let message = NSLocalizedString("Error loading data", comment: "Error loading data")
+                                let message = NSLocalizedString("Error loading data. Showing only cached posts.",
+                                                                comment: "Error loading data. Showing only cached posts.")
                                 let title = NSLocalizedString("Error", comment: "Error")
                                 self.showAlert(with: message, title: title)
+                                self.loadFromCache()
                                 print(responseString)
                             }
-                            
                             self.tableViewRefresherEndAnimating()
-                            if withCache {
+                            if withCache && success {
                                 self.loadFromCache()
                             }
         })
@@ -89,6 +90,7 @@ extension NewsListViewController: UITableViewDelegate {
         } else {
             print("Error of pushing NewsDetailsViewController")
         }
+        self.tableView?.deselectRow(at: indexPath, animated: false)
     }
 }
 

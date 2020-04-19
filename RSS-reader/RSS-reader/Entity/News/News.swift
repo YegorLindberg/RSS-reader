@@ -24,7 +24,7 @@ class News: Equatable {
     }
 
     static func == (lhs: News, rhs: News) -> Bool {
-        return lhs.link == rhs.link
+        return (lhs.link == rhs.link) && (lhs.link != "")
     }
 
     init() {}
