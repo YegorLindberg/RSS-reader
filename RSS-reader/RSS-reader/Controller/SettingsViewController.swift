@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: BaseViewController {
 
     @IBOutlet var urlTextField: UITextField?
     var newUrl = ""
@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
     }
     
     func prepareInterface() {
-        urlTextField?.text = App.management.mainRSSUrl
+        urlTextField?.text = App.management.mainRSSUrls[0].url
         addDismissKeyBoardGesture()
     }
     
@@ -49,10 +49,14 @@ class SettingsViewController: UIViewController {
                                     self.checkForValidRSSFlow()
                                 } else {
                                     print(responseString)
+                                    let message = NSLocalizedString("Invalid RSS-flow. Check for mistakes", comment: "Invalid RSS-flow. Check for mistakes")
+                                    self.showAlert(with: message)
                                     print("\n --- Invalid RSS-flow")
                                 }
             })
         } else {
+            let message = NSLocalizedString("Invalid URL", comment: "Invalid URL")
+            showAlert(with: message)
             print(" --- Invalid URL")
         }
     }
@@ -60,13 +64,21 @@ class SettingsViewController: UIViewController {
     func checkForValidRSSFlow() {
         checkedNewsList.removeDuplicates()
         if checkedNewsList.count > 0 {
-            App.management.mainRSSUrl = self.newUrl
+            App.management.mainRSSUrls[0].url = self.newUrl
             self.view.endEditing(true)
+            let message = NSLocalizedString("RSS flow successfully changed", comment: "RSS flow successfully changed")
+            self.showAlert(with: message)
             print(" +++ RSS-flow was changed to: " + self.newUrl)
         } else {
             print(" --- Invalid RSS-flow. Currently finded 0(zero) news for this flow.")
         }
     }
+    
+    func showAlert(with message: String) {
+        let title = NSLocalizedString("RSS-flow", comment: "Alert title")
+        self.showAlert(with: message, title: title)
+    }
+
 }
 
 //MARK: - TextField Delegate

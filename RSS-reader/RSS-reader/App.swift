@@ -11,7 +11,7 @@ import CoreData
 
 
 final class App: NSObject {
-    var mainRSSUrl = "https://developer.apple.com/news/rss/news.rss"
+    var mainRSSUrls: [RSSFlow] = []
     var newsList: [News] = []
     var newsForCachingList: [CachedNews] = []
 

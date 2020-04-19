@@ -11,8 +11,8 @@ import Foundation
 
 private let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
-    dateFormatter.locale = Locale.current
-    dateFormatter.timeZone = TimeZone.current
+    dateFormatter.locale = Locale(identifier: "en_US") //Locale.current
+    dateFormatter.timeZone =  TimeZone(secondsFromGMT: 0)//TimeZone.current
 
     return dateFormatter
 }()
@@ -59,9 +59,9 @@ extension Date {
         return nil
     }
     
-    func toString( dateFormat format  : String ) -> String
+    func toString(dateFormat format: String, formatter: DateFormatter = dateFormatter) -> String
     {
-        dateFormatter.dateFormat = format
-        return dateFormatter.string(from: self)
+        formatter.dateFormat = format
+        return formatter.string(from: self)
     }
 }

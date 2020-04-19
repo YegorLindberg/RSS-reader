@@ -9,13 +9,21 @@
 import UIKit
 
 
-class NewsDetailsViewController: UIViewController {
+class NewsDetailsViewController: BaseViewController {
     
     @IBOutlet var newsImageView: UIImageView?
     @IBOutlet var headerNewsLabel: UILabel?
     @IBOutlet var textNewsLabel: UILabel?
     @IBOutlet var authorLabel: UILabel?
     @IBOutlet var pubDateLabel: UILabel?
+    
+    let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+
+        return dateFormatter
+    }()
     
     var news = News()
     
@@ -42,10 +50,12 @@ class NewsDetailsViewController: UIViewController {
         let emptyPubDateStr = NSLocalizedString("Not specified", comment: "Empty PubDate")
         
         let authorName: String = (news.author.name == "") ? emptyAuthorStr : news.author.name
-        authorLabel?.text = NSLocalizedString("Author: " + (authorName), comment: "News author")
+        let localizedAuthorStr = NSLocalizedString("Author: ", comment: "News author")
+        authorLabel?.text = localizedAuthorStr + (authorName)
         
-        let localizedPubDateStr = news.dateTime?.toString(dateFormat: "yyyy-MM-dd HH:mm:ss") ?? ""
-        pubDateLabel?.text = NSLocalizedString("Publication date: " + (localizedPubDateStr == "" ? emptyPubDateStr : localizedPubDateStr), comment: "News pubdate")
+        let localizedPubDate = news.dateTime?.toString(dateFormat: "yyyy-MM-dd HH:mm:ss", formatter: dateFormatter) ?? ""
+        let localizedPubDateStr = NSLocalizedString("Publication date: ", comment: "News pubdate")
+        pubDateLabel?.text = localizedPubDateStr + (localizedPubDate == "" ? emptyPubDateStr : localizedPubDate)
     }
     
     @IBAction func onHeaderNewsTapped(_ sender: UITapGestureRecognizer) {
@@ -68,5 +78,7 @@ class NewsDetailsViewController: UIViewController {
             print(" --- Link is empty")
         }
     }
+    
+    
     
 }

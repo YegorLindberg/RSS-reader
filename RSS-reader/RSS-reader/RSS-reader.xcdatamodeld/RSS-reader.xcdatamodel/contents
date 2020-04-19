@@ -7,10 +7,14 @@
         <attribute name="imageUrl" attributeType="String" defaultValueString=""/>
         <attribute name="link" attributeType="String" defaultValueString=""/>
         <attribute name="newsDescription" attributeType="String" defaultValueString=""/>
-        <attribute name="pubDate" attributeType="Date" defaultDateTimeInterval="-595929600" usesScalarValueType="NO"/>
+        <attribute name="pubDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="RSSFlow" representedClassName=".RSSFlow" syncable="YES">
+        <attribute name="url" attributeType="String" defaultValueString="&quot;https://developer.apple.com/news/rss/news.rss&quot;"/>
     </entity>
     <elements>
         <element name="CachedNews" positionX="-63" positionY="-8.48828125" width="128" height="163"/>
+        <element name="RSSFlow" positionX="-63" positionY="54" width="128" height="58"/>
     </elements>
 </model>

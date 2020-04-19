@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("App started")
+        let urls: [RSSFlow] = App.management.fetch(RSSFlow.self)
+        let defaultRssFlow = RSSFlow(context: App.management.context)
+        defaultRssFlow.url = "https://developer.apple.com/news/rss/news.rss"
+        App.management.mainRSSUrls = (urls.count < 1) ? [defaultRssFlow] : urls
+        App.management.newsForCachingList = App.management.fetch(CachedNews.self)
         return true
     }
 
@@ -39,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         App.management.newsForCachingList.forEach { (cachedNews) in
             App.management.deleteFromCoreData(cachedNews)
         }
+        App.management.saveContext()
         App.management.parseNewsToCached()
         App.management.saveContext()
     }

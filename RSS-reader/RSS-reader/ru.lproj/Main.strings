@@ -14,19 +14,25 @@
 "jvZ-6S-GxA.title" = "Список RSS";
 
 /* Class = "UILabel"; text = "Description NewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCell"; ObjectID = "KeP-CL-HQC"; */
-"KeP-CL-HQC.text" = "Description NewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCellNewsTableViewCell";
+"KeP-CL-HQC.text" = "Описание";
 
 /* Class = "UIViewController"; title = "Settings"; ObjectID = "Kir-9Q-4kP"; */
 "Kir-9Q-4kP.title" = "Настройки";
 
 /* Class = "UILabel"; text = "Header"; ObjectID = "Kvk-Rv-VnM"; */
-"Kvk-Rv-VnM.text" = "Header";
+"Kvk-Rv-VnM.text" = "Заголовок";
 
 /* Class = "UIViewController"; title = "Web View"; ObjectID = "l9b-bu-N64"; */
 "l9b-bu-N64.title" = "Веб-версия";
 
 /* Class = "UIViewController"; title = "News Deatils"; ObjectID = "lVO-Gy-Uoj"; */
 "lVO-Gy-Uoj.title" = "Детали новости";
+
+/* Class = "UILabel"; text = "News Header"; ObjectID = "q9f-4V-g5j"; */
+"q9f-4V-g5j.text" = "Заголовок Новости";
+
+/* Class = "UILabel"; text = "publication date"; ObjectID = "qgB-HG-gvp"; */
+"qgB-HG-gvp.text" = "Дата публикации";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Tlh-y9-TdJ"; */
 "Tlh-y9-TdJ.title" = "Настройки";

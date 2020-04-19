@@ -1,0 +1,24 @@
+/* News author */
+"Author: " = "Автор: ";
+
+/* Dismiss title */
+"Dismiss" = "Закрыть";
+
+/* Invalid RSS-flow. Check for mistakes */
+"Invalid RSS-flow. Check for mistakes" = "Неверный RSS-поток. Проверьте правильность написания";
+
+/* Invalid URL */
+"Invalid URL" = "Неверный URL";
+
+/* Empty PubDate */
+"Not specified" = "Не определено";
+
+/* RSS flow successfully changed */
+"RSS flow successfully changed" = "RSS поток был успешно изменен";
+
+/* Alert title */
+"RSS-flow" = "RSS-поток";
+
+/* Empty Auhor */
+"Unnamed" = "Неизвестен";
+
