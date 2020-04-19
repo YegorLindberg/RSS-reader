@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import CoreData
 
 
 class NewsListViewController: UIViewController {
@@ -23,54 +24,65 @@ class NewsListViewController: UIViewController {
         return refreshControl
     }()
     
-    var newsList: [News] = [] {
-        didSet {
-            tableView?.reloadData()
-        }
-    }
+    var newsList: [News] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView?.refreshControl = refresher
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        reloadNewsList()
+        reloadNewsList(true)
     }
     
     @objc
-    func reloadNewsList() {
-        loadFromUrl()
-        let cachedNewsList = loadFromFile()
-        cachedNewsList.forEach { (news) in
-            newsList.append(news)
-        }
-        newsList.removeDuplicates()
-        let deadline = DispatchTime.now() + .milliseconds(1000)
-        DispatchQueue.main.asyncAfter(deadline: deadline) {
-            self.tableView?.refreshControl?.endRefreshing()
-        }
+    func reloadNewsList(_ withCache: Bool = false) {
+        loadNews(withCache)
     }
     
-    func loadFromUrl() {
+    func loadNews(_ withCache: Bool) {
+        self.tableView?.refreshControl?.beginRefreshing()
         AppApi().sendRequest(url: App.management.mainRSSUrl,
                          params: nil,
                          handler: { (responseString, success) in
                             if success {
                                 let newsParser = NewsParser(withXML: responseString as? String ?? "")
                                 self.newsList = newsParser.parse()
+                                App.management.newsList = self.newsList
+                                self.tableView?.reloadData()
+                                self.tableViewRefresherEndAnimating()
+                                if withCache {
+                                    self.loadFromCache()
+                                }
                             } else {
                                 print(responseString)
                             }
         })
     }
     
-    func loadFromCoreData() {
-        guard let cachedNews = try! App.management.context.fetch(CachedNews.fetchRequest()) as? [CachedNews]
-            else { return }
+    func loadFromCache() {
+        self.tableView?.refreshControl?.beginRefreshing()
+        let cachedNewsList = loadFromCoreData()
+        App.management.newsForCachingList = cachedNewsList
+        cachedNewsList.forEach { (cachedNews) in
+            newsList.append(cachedNews.makeNews())
+        }
+        newsList.removeDuplicates()
+        tableView?.reloadData()
+        App.management.newsList = newsList
+        tableViewRefresherEndAnimating()
+    }
+    
+    func tableViewRefresherEndAnimating() {
+        let deadline = DispatchTime.now() + .milliseconds(1000)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            self.tableView?.refreshControl?.endRefreshing()
+        }
+    }
+    
+    func loadFromCoreData() -> [CachedNews] {
+        let cachedNews = App.management.fetch(CachedNews.self)
         cachedNews.forEach { (cachedNews) in
             print(cachedNews.title)
         }
+        return cachedNews
     }
     
     func loadFromFile() -> [News] {

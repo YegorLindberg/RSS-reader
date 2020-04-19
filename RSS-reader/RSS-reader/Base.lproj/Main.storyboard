@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UDw-LF-Fke">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UDw-LF-Fke">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -51,10 +51,10 @@
                                                 <constraint firstItem="b0E-fx-2a2" firstAttribute="leading" secondItem="Y4c-Pz-jiD" secondAttribute="leading" constant="10" id="DSY-Bh-rP9"/>
                                                 <constraint firstItem="Kvk-Rv-VnM" firstAttribute="top" secondItem="Y4c-Pz-jiD" secondAttribute="top" constant="10" id="FaS-UM-nmz"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KeP-CL-HQC" secondAttribute="bottom" constant="10" id="Lkx-GQ-4W5"/>
+                                                <constraint firstItem="Kvk-Rv-VnM" firstAttribute="leading" secondItem="b0E-fx-2a2" secondAttribute="trailing" constant="10" id="M24-qJ-o4K"/>
                                                 <constraint firstItem="KeP-CL-HQC" firstAttribute="top" secondItem="Kvk-Rv-VnM" secondAttribute="bottom" constant="10" id="P29-iF-q6P"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KeP-CL-HQC" secondAttribute="trailing" constant="10" id="Vcy-0J-ohy"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b0E-fx-2a2" secondAttribute="bottom" constant="10" id="WLx-Kf-Wf9"/>
-                                                <constraint firstItem="Kvk-Rv-VnM" firstAttribute="leading" secondItem="Y4c-Pz-jiD" secondAttribute="leading" constant="80" id="dR2-yw-1nO"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kvk-Rv-VnM" secondAttribute="trailing" constant="10" id="hno-YA-grw"/>
                                                 <constraint firstItem="KeP-CL-HQC" firstAttribute="leading" secondItem="Kvk-Rv-VnM" secondAttribute="leading" id="lcC-3C-INs"/>
                                                 <constraint firstItem="b0E-fx-2a2" firstAttribute="top" secondItem="Y4c-Pz-jiD" secondAttribute="top" constant="10" id="nsd-G6-wkc"/>

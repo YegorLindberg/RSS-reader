@@ -28,17 +28,6 @@ class News: Equatable {
     }
 
     init() {}
-    
-    init(with cachedNews: CachedNews) {
-        self.title = cachedNews.title
-        self.link = cachedNews.link
-        self.imageUrl = cachedNews.imageUrl
-        self.newsDescription = cachedNews.newsDescription
-        self.dateTime = cachedNews.pubDate
-        self.author = Author(name: cachedNews.authorName,
-                             email: cachedNews.authorEmail,
-                             uri: cachedNews.authorUri)
-    }
 
     init(title: String, link: String, image: String? = nil, description: String) {
         self.title = title

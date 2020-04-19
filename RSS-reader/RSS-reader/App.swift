@@ -13,9 +13,29 @@ import CoreData
 final class App: NSObject {
     var mainRSSUrl = "https://developer.apple.com/news/rss/news.rss"
     var newsList: [News] = []
+    var newsForCachingList: [CachedNews] = []
 
+    //init singletone
     private override init(){}
     static let management = App()
+    
+    //[News] -> [CachedNews]
+    func parseNewsToCached() {
+        newsForCachingList = []
+        newsList.forEach { (news) in
+            let cachedItem = CachedNews(context: App.management.context)
+            cachedItem.title = news.title
+            cachedItem.link = news.link
+            cachedItem.imageUrl = news.imageUrl ?? ""
+            cachedItem.pubDate = news.dateTime ?? Date(timeIntervalSince1970: 0)
+            cachedItem.newsDescription = news.newsDescription
+            cachedItem.authorName = news.author.name
+            cachedItem.authorEmail = news.author.email
+            cachedItem.authorUri = news.author.uri
+            newsForCachingList.append(cachedItem)
+        }
+    }
+    
     
     // MARK: - Core Data stack
 
@@ -43,6 +63,23 @@ final class App: NSObject {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    //get cached array of objects from CoreData
+    func fetch<T: NSManagedObject>(_ objectType: T.Type) -> [T] {
+        let entityName = String(describing: objectType)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        do {
+            let fetchedObjects = try context.fetch(fetchRequest) as? [T]
+            return fetchedObjects ?? [T]()
+        } catch {
+            print(error)
+            return [T]()
+        }
+    }
+    
+    func deleteFromCoreData(_ object: NSManagedObject) {
+        context.delete(object)
     }
 
 }

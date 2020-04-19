@@ -20,9 +20,9 @@ extension CachedNews {
     @NSManaged public var title: String
     @NSManaged public var link: String
     @NSManaged public var imageUrl: String
-    @NSManaged public var authorName: String
     @NSManaged public var pubDate: Date
     @NSManaged public var newsDescription: String
+    @NSManaged public var authorName: String
     @NSManaged public var authorEmail: String
     @NSManaged public var authorUri: String
 

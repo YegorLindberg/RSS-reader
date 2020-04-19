@@ -33,5 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("APP WILL TERMINATING")
+        //will delete old data from Core Data and save new data
+        App.management.newsForCachingList.forEach { (cachedNews) in
+            App.management.deleteFromCoreData(cachedNews)
+        }
+        App.management.parseNewsToCached()
+        App.management.saveContext()
+    }
+    
 }
 
