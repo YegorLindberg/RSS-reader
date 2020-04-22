@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 import CoreData
 
 
@@ -39,7 +38,7 @@ class NewsListViewController: BaseViewController {
     
     func loadNews(_ withCache: Bool) {
         self.tableView?.refreshControl?.beginRefreshing()
-        AppApi().sendRequest(url: App.management.mainRSSUrls[0].url,
+        AppApi().loadNewsList(url: App.management.mainRSSUrls[0].url,
                          params: nil,
                          handler: { (responseString, success) in
                             if success {
@@ -107,11 +106,13 @@ extension NewsListViewController: UITableViewDataSource {
         let news = newsList[indexPath.row]
         cell.titleLabel?.text = news.title
         cell.descriptionLabel?.text = news.newsDescription
+        cell.newsImageView?.imageFromUrl(urlString: "https://www.groovypost.com/wp-content/uploads/2010/12/ios-clear-cache-safari.jpg")
 //        if let imageUrl = news.imageUrl {
-//            cell.imageView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
+//            cell.newsImageView?.imageFromUrl(urlString: imageUrl)
 //        }
         
         return cell
     }
+    
     
 }

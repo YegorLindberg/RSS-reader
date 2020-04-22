@@ -17,16 +17,8 @@ class NewsTableViewCell: UITableViewCell {
     
     static let reuseIdentifier = "NewsTableViewCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     override func prepareForReuse() {
-        newsImageView?.image = UIImage(named: "placeholder.png")
+        newsImageView?.image = UIImage()
         titleLabel?.text = ""
         descriptionLabel?.text = ""
     }

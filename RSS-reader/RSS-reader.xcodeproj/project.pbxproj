@@ -24,12 +24,16 @@
 		5C230463244B5DC200F4A9D5 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230462244B5DC200F4A9D5 /* Author.swift */; };
 		5C230465244B5F0800F4A9D5 /* NewsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230464244B5F0800F4A9D5 /* NewsParser.swift */; };
 		5C230467244B75F400F4A9D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C230466244B75F400F4A9D5 /* DateExtension.swift */; };
+		5C2791552450301C00EF9856 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2791542450301C00EF9856 /* UIImageExtension.swift */; };
+		5C279159245030E700EF9856 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C279158245030E700EF9856 /* ImageCacheType.swift */; };
+		5C27915B2450381D00EF9856 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C27915A2450381D00EF9856 /* ImageCache.swift */; };
 		5C38F412244A101D00664B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C38F410244A101D00664B06 /* InfoPlist.strings */; };
 		5C38F414244A214E00664B06 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C38F413244A214E00664B06 /* WebKit.framework */; };
 		5C38F41A244A26DF00664B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C38F419244A26DF00664B06 /* Assets.xcassets */; };
 		5C3F17942448DDD400DF6855 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F17932448DDD400DF6855 /* App.swift */; };
 		5C3F17972448E38F00DF6855 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F17962448E38F00DF6855 /* ArrayExtension.swift */; };
 		5C8F919C2448BFFB000D15C1 /* AppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F919B2448BFFB000D15C1 /* AppApi.swift */; };
+		5C91ED43244F83AE0043E3B6 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C91ED42244F83AE0043E3B6 /* UIImageViewExtension.swift */; };
 		5C9A7539244B80C7008C84A1 /* RSS-reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A7537244B80C7008C84A1 /* RSS-reader.xcdatamodeld */; };
 		5C9A7541244B94B6008C84A1 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A753F244B94B6008C84A1 /* News+CoreDataClass.swift */; };
 		5C9A7542244B94B6008C84A1 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A7540244B94B6008C84A1 /* News+CoreDataProperties.swift */; };
@@ -57,6 +61,9 @@
 		5C230462244B5DC200F4A9D5 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		5C230464244B5F0800F4A9D5 /* NewsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsParser.swift; sourceTree = "<group>"; };
 		5C230466244B75F400F4A9D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5C2791542450301C00EF9856 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		5C279158245030E700EF9856 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
+		5C27915A2450381D00EF9856 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		5C38F40F244A099800664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5C38F411244A101D00664B06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C38F413244A214E00664B06 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -64,6 +71,7 @@
 		5C3F17932448DDD400DF6855 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5C3F17962448E38F00DF6855 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		5C8F919B2448BFFB000D15C1 /* AppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApi.swift; sourceTree = "<group>"; };
+		5C91ED42244F83AE0043E3B6 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5C9A7538244B80C7008C84A1 /* RSS-reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RSS-reader.xcdatamodel"; sourceTree = "<group>"; };
 		5C9A753F244B94B6008C84A1 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "News+CoreDataClass.swift"; path = "RSS-reader/Entity/News/News+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5C9A7540244B94B6008C84A1 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "News+CoreDataProperties.swift"; path = "RSS-reader/Entity/News/News+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -105,6 +113,7 @@
 		5C0941D424475B1100D5D21B /* RSS-reader */ = {
 			isa = PBXGroup;
 			children = (
+				5C279156245030CB00EF9856 /* Cache */,
 				5C3F17952448E37D00DF6855 /* Extension */,
 				5C8F919A2448BEED000D15C1 /* Network */,
 				5C0941EB2447757100D5D21B /* Cell */,
@@ -174,11 +183,30 @@
 			path = "RSS-flow";
 			sourceTree = "<group>";
 		};
+		5C279156245030CB00EF9856 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				5C279157245030D700EF9856 /* Image */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		5C279157245030D700EF9856 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5C279158245030E700EF9856 /* ImageCacheType.swift */,
+				5C27915A2450381D00EF9856 /* ImageCache.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		5C3F17952448E37D00DF6855 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				5C3F17962448E38F00DF6855 /* ArrayExtension.swift */,
 				5C230466244B75F400F4A9D5 /* DateExtension.swift */,
+				5C91ED42244F83AE0043E3B6 /* UIImageViewExtension.swift */,
+				5C2791542450301C00EF9856 /* UIImageExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -312,18 +340,22 @@
 				5C0941D624475B1100D5D21B /* AppDelegate.swift in Sources */,
 				5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */,
 				5C230467244B75F400F4A9D5 /* DateExtension.swift in Sources */,
+				5C279159245030E700EF9856 /* ImageCacheType.swift in Sources */,
 				5C9A7542244B94B6008C84A1 /* News+CoreDataProperties.swift in Sources */,
 				5C0941ED2447759200D5D21B /* NewsTableViewCell.swift in Sources */,
 				5C1C0A9F244CEEE20011C9BE /* BaseViewController.swift in Sources */,
 				5C9A7541244B94B6008C84A1 /* News+CoreDataClass.swift in Sources */,
 				5C3F17942448DDD400DF6855 /* App.swift in Sources */,
+				5C91ED43244F83AE0043E3B6 /* UIImageViewExtension.swift in Sources */,
 				5C0941EF244775C200D5D21B /* News.swift in Sources */,
 				5C1C0A9B244CE72D0011C9BE /* RSSFlow+CoreDataClass.swift in Sources */,
 				5C0941F524477BF500D5D21B /* NewsListViewController.swift in Sources */,
 				5C1C0A9C244CE72D0011C9BE /* RSSFlow+CoreDataProperties.swift in Sources */,
 				5C9A7539244B80C7008C84A1 /* RSS-reader.xcdatamodeld in Sources */,
 				5C230463244B5DC200F4A9D5 /* Author.swift in Sources */,
+				5C2791552450301C00EF9856 /* UIImageExtension.swift in Sources */,
 				5C0941D824475B1100D5D21B /* SceneDelegate.swift in Sources */,
+				5C27915B2450381D00EF9856 /* ImageCache.swift in Sources */,
 				5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */,
 				5C230465244B5F0800F4A9D5 /* NewsParser.swift in Sources */,
 				5C0941F324477BE600D5D21B /* SettingsViewController.swift in Sources */,

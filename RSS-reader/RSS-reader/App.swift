@@ -14,6 +14,8 @@ final class App: NSObject {
     var mainRSSUrls: [RSSFlow] = []
     var newsList: [News] = []
     var newsForCachingList: [CachedNews] = []
+    
+    var imageCache = ImageCache()
 
     //init singletone
     private override init(){}

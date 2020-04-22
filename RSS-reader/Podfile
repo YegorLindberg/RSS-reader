@@ -4,7 +4,6 @@ use_modular_headers!
 abstract_target 'Common' do
   pod 'Alamofire'
   pod 'MBProgressHUD'
-  pod 'SDWebImage'
   
   target 'RSS-reader'
 end

@@ -42,7 +42,7 @@ class NewsDetailsViewController: BaseViewController {
     
     func prepareInterface() {
         navigationItem.title = "News Details"
-        newsImageView?.sd_setImage(with: URL(string: news.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        self.newsImageView?.imageFromUrl(urlString: "https://www.groovypost.com/wp-content/uploads/2010/12/ios-clear-cache-safari.jpg")
         headerNewsLabel?.text = news.title
         textNewsLabel?.text = news.newsDescription
         
