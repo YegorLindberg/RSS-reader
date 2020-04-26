@@ -16,12 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("App started")
+        getCachedData()
+        return true
+    }
+    
+    func getCachedData() {
         let urls: [RSSFlow] = App.management.fetch(RSSFlow.self)
         let defaultRssFlow = RSSFlow(context: App.management.context)
         defaultRssFlow.url = "https://developer.apple.com/news/rss/news.rss"
+        
         App.management.mainRSSUrls = (urls.count < 1) ? [defaultRssFlow] : urls
         App.management.newsForCachingList = App.management.fetch(CachedNews.self)
-        return true
+        
+        App.management.getImagesFromFileSystem()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -40,13 +47,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         print("APP WILL TERMINATING")
-        //will delete old data from Core Data and save new data
+        
+    }
+    
+    func saveAppDataToDevice() {
+        //will delete old data from Core Data
         App.management.newsForCachingList.forEach { (cachedNews) in
             App.management.deleteFromCoreData(cachedNews)
         }
+        
+        //save new data to Core Data
         App.management.saveContext()
         App.management.parseNewsToCached()
         App.management.saveContext()
+        
+        //delete old images
+//        App.management.delete
+//        UserDefaults.standard.removeObject(forKey: App.management.imageCacheKey)
+        
+        //save new images to filesystem
+//        App.management.saveImagesToFileSystem()
     }
     
 }

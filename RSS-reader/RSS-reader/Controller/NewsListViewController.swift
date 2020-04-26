@@ -107,10 +107,7 @@ extension NewsListViewController: UITableViewDataSource {
         cell.titleLabel?.text = news.title
         cell.descriptionLabel?.text = news.newsDescription
         cell.newsImageView?.imageFromUrl(urlString: "https://www.groovypost.com/wp-content/uploads/2010/12/ios-clear-cache-safari.jpg")
-//        if let imageUrl = news.imageUrl {
-//            cell.newsImageView?.imageFromUrl(urlString: imageUrl)
-//        }
-        
+//        cell.newsImageView?.imageFromUrl(urlString: news.imageUrl ?? "")
         return cell
     }
     

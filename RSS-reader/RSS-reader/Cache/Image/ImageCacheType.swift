@@ -13,17 +13,17 @@ import UIKit
 protocol ImageCacheType: class {
     
     // Returns the image associated with a given url
-    func image(for url: URL) -> UIImage?
+    func image(for urlStr: String) -> UIImage?
     
     // Inserts the image of the specified url in the cache
-    func insertImage(_ image: UIImage?, for url: URL)
+    func insertImage(_ image: UIImage?, for urlStr: String)
     
     // Removes the image of the specified url in the cache
-    func removeImage(for url: URL)
+    func removeImage(for urlStr: String)
     
     // Removes all images from the cache
     func removeAllImages()
     
     // Accesses the value associated with the given key for reading and writing
-    subscript(_ url: URL) -> UIImage? { get set }
+    subscript(_ urlStr: String) -> UIImage? { get set }
 }

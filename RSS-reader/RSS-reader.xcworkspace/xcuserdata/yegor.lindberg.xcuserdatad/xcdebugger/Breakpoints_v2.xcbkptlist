@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "554A659A-1875-4CAC-952B-2DCD8C0B6579"
-            shouldBeEnabled = "No"
+            uuid = "78A431B7-2539-42DF-BE2D-5EABE241BC05"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSS-reader/Controller/NewsListViewController.swift"
+            filePath = "RSS-reader/App.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "deleteImagesFromFileSystem()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
