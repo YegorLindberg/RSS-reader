@@ -17,6 +17,7 @@ final class App: NSObject {
     var newsForCachingList: [CachedNews] = []
     
     var imageCache = ImageCache()
+    var imageForCachingList: [CachedImage] = []
 
     //init singletone
     private override init(){}
@@ -39,6 +40,27 @@ final class App: NSObject {
         }
     }
     
+    //[UIImage] -> [CachedImage]
+    func parseImagesToCached() {
+        imageCache.imagesUrls.forEach { (urlStr) in
+            if let image = imageCache.image(for: urlStr) {
+                let cachedItem = CachedImage(context: App.management.context)
+                cachedItem.imageData = image.pngData()
+                cachedItem.imageUrl = urlStr
+                imageForCachingList.append(cachedItem)
+            }
+        }
+    }
+    
+    //[CachedImage] -> [UIImage]
+    func loadDataToImageCache() {
+        imageForCachingList.forEach { (cachedImage) in
+            if let data = cachedImage.imageData,
+                let image = UIImage(data: data) {
+                imageCache.insertImage(image, for: cachedImage.imageUrl)
+            }
+        }
+    }
     
     // MARK: - Core Data stack
 
@@ -84,58 +106,5 @@ final class App: NSObject {
     func deleteFromCoreData(_ object: NSManagedObject) {
         context.delete(object)
     }
-    
-    //MARK: - Images controlling
-    final let imageCacheKey = "ImageCache"
-    
-    func saveImagesToFileSystem() {
-        imageCache.imagesUrls.forEach { (urlStr) in
-            if let image = imageCache.image(for: urlStr) {
-                storeImage(urlString: urlStr, image: image)
-            }
-        }
-    }
-    
-    private func storeImage(urlString: String, image: UIImage) {
-        let path = NSTemporaryDirectory().appending(UUID().uuidString)
-        let url = URL(fileURLWithPath: path)
-        
-        let data = image.pngData()
-        do { try data?.write(to: url) }
-        catch { print(error) }
-        
-        var dictionary = UserDefaults.standard.object(forKey: imageCacheKey) as? [String : String]
-        if dictionary == nil { dictionary = [String : String]() }
-        dictionary![urlString] = path
-        UserDefaults.standard.set(dictionary, forKey: imageCacheKey)
-    }
-    
-    func getImagesFromFileSystem() {
-        if let dictionary = UserDefaults.standard.object(forKey: App.management.imageCacheKey) as? [String : String] {
-            dictionary.keys.forEach { (urlString) in
-                if let path = dictionary[urlString] {
-                    if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-                        let image = UIImage(data: data)
-                        App.management.imageCache.insertImage(image, for: urlString)
-                    }
-                }
-            }
-        }
-    }
-    
-    func deleteImagesFromFileSystem() {
-        if let dictionary = UserDefaults.standard.object(forKey: App.management.imageCacheKey) as? [String : String] {
-            dictionary.keys.forEach { (urlString) in
-                if let path = dictionary[urlString] {
-                    
-                    if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-                        
-                    }
-                }
-            }
-        }
-    }
-    
-    //MARK: -
     
 }

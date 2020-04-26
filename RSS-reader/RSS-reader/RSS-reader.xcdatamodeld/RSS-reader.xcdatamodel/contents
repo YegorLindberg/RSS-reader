@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachedImage" representedClassName=".CachedImage" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="imageUrl" attributeType="String" defaultValueString=""/>
+    </entity>
     <entity name="CachedNews" representedClassName=".CachedNews" syncable="YES">
         <attribute name="authorEmail" attributeType="String" defaultValueString=""/>
         <attribute name="authorName" attributeType="String" defaultValueString=""/>
@@ -16,5 +20,6 @@
     <elements>
         <element name="CachedNews" positionX="-63" positionY="-8.48828125" width="128" height="163"/>
         <element name="RSSFlow" positionX="-63" positionY="54" width="128" height="58"/>
+        <element name="CachedImage" positionX="-63" positionY="54" width="128" height="73"/>
     </elements>
 </model>

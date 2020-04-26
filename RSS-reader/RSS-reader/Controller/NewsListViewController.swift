@@ -70,6 +70,18 @@ class NewsListViewController: BaseViewController {
         tableView?.reloadData()
         App.management.newsList = newsList
         tableViewRefresherEndAnimating()
+        clearUnnecessaryCachedImages()
+    }
+    
+    func clearUnnecessaryCachedImages() {
+        App.management.imageCache.imagesUrls.forEach { (urlStr) in
+            let index = newsList.firstIndex { (news) -> Bool in
+                return news.imageUrl == urlStr
+            }
+            if index == nil {
+                App.management.imageCache.removeImage(for: urlStr)
+            }
+        }
     }
     
     func tableViewRefresherEndAnimating() {
@@ -106,8 +118,8 @@ extension NewsListViewController: UITableViewDataSource {
         let news = newsList[indexPath.row]
         cell.titleLabel?.text = news.title
         cell.descriptionLabel?.text = news.newsDescription
-        cell.newsImageView?.imageFromUrl(urlString: "https://www.groovypost.com/wp-content/uploads/2010/12/ios-clear-cache-safari.jpg")
-//        cell.newsImageView?.imageFromUrl(urlString: news.imageUrl ?? "")
+//        cell.newsImageView?.imageFromUrl(urlString: "https://www.groovypost.com/wp-content/uploads/2010/12/ios-clear-cache-safari.jpg")
+        cell.newsImageView?.imageFromUrl(urlString: news.imageUrl ?? "")
         return cell
     }
     

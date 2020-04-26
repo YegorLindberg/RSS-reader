@@ -96,16 +96,3 @@ extension ImageCache: ImageCacheType {
     }
     
 }
-
-//MARK: - save and get from local storage
-extension ImageCache {
-    
-    static func saveImagesToStorage() {
-        
-    }
-    
-    static func loadImagesFromStorage() {
-        
-    }
-    
-}

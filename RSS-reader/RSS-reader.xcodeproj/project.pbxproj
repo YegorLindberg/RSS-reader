@@ -37,6 +37,8 @@
 		5C9A7539244B80C7008C84A1 /* RSS-reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A7537244B80C7008C84A1 /* RSS-reader.xcdatamodeld */; };
 		5C9A7541244B94B6008C84A1 /* News+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A753F244B94B6008C84A1 /* News+CoreDataClass.swift */; };
 		5C9A7542244B94B6008C84A1 /* News+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A7540244B94B6008C84A1 /* News+CoreDataProperties.swift */; };
+		5CA2B9322455D391009D5922 /* CachedImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2B9302455D391009D5922 /* CachedImage+CoreDataClass.swift */; };
+		5CA2B9332455D391009D5922 /* CachedImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2B9312455D391009D5922 /* CachedImage+CoreDataProperties.swift */; };
 		84ED14BFB14B2ACF079B7754 /* libPods-Common-RSS-reader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB332FA3EA74FA33C233B70 /* libPods-Common-RSS-reader.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		5C9A7538244B80C7008C84A1 /* RSS-reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RSS-reader.xcdatamodel"; sourceTree = "<group>"; };
 		5C9A753F244B94B6008C84A1 /* News+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "News+CoreDataClass.swift"; path = "RSS-reader/Entity/News/News+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5C9A7540244B94B6008C84A1 /* News+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "News+CoreDataProperties.swift"; path = "RSS-reader/Entity/News/News+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5CA2B9302455D391009D5922 /* CachedImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedImage+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5CA2B9312455D391009D5922 /* CachedImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedImage+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		A8B6A53E078D68AAACF6882D /* Pods-Common-RSS-reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-RSS-reader.release.xcconfig"; path = "Target Support Files/Pods-Common-RSS-reader/Pods-Common-RSS-reader.release.xcconfig"; sourceTree = "<group>"; };
 		B90C67C6B540A1BD0513B147 /* Pods-Common-RSS-reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-RSS-reader.debug.xcconfig"; path = "Target Support Files/Pods-Common-RSS-reader/Pods-Common-RSS-reader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +152,7 @@
 		5C0941EA2447717300D5D21B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5CA2B92F2455D074009D5922 /* CachedImage */,
 				5C1C0A9D244CE7350011C9BE /* RSS-flow */,
 				5C14891C244CB87C00BA4A23 /* News */,
 				5C230462244B5DC200F4A9D5 /* Author.swift */,
@@ -217,6 +222,15 @@
 				5C8F919B2448BFFB000D15C1 /* AppApi.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5CA2B92F2455D074009D5922 /* CachedImage */ = {
+			isa = PBXGroup;
+			children = (
+				5CA2B9302455D391009D5922 /* CachedImage+CoreDataClass.swift */,
+				5CA2B9312455D391009D5922 /* CachedImage+CoreDataProperties.swift */,
+			);
+			path = CachedImage;
 			sourceTree = "<group>";
 		};
 		77EC9BD48E9A538FD77D7183 /* Frameworks */ = {
@@ -338,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C0941D624475B1100D5D21B /* AppDelegate.swift in Sources */,
+				5CA2B9332455D391009D5922 /* CachedImage+CoreDataProperties.swift in Sources */,
 				5C0941F724477C1700D5D21B /* NewsDetailsViewController.swift in Sources */,
 				5C230467244B75F400F4A9D5 /* DateExtension.swift in Sources */,
 				5C279159245030E700EF9856 /* ImageCacheType.swift in Sources */,
@@ -358,6 +373,7 @@
 				5C27915B2450381D00EF9856 /* ImageCache.swift in Sources */,
 				5C0941F924477C2E00D5D21B /* WebViewViewController.swift in Sources */,
 				5C230465244B5F0800F4A9D5 /* NewsParser.swift in Sources */,
+				5CA2B9322455D391009D5922 /* CachedImage+CoreDataClass.swift in Sources */,
 				5C0941F324477BE600D5D21B /* SettingsViewController.swift in Sources */,
 				5C8F919C2448BFFB000D15C1 /* AppApi.swift in Sources */,
 				5C3F17972448E38F00DF6855 /* ArrayExtension.swift in Sources */,
