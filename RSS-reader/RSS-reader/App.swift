@@ -88,7 +88,15 @@ final class App: NSObject {
     //MARK: - Images controlling
     final let imageCacheKey = "ImageCache"
     
-    func saveImagesToFileSystem() {
+    lazy private var pathForCacheDirectoryAsString: String? = {
+        return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
+    }()
+    
+    lazy private var pathForCacheDirectoryAsUrl: URL? = {
+        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
+    }()
+    
+    func saveImagesToCachesDirectory() {
         imageCache.imagesUrls.forEach { (urlStr) in
             if let image = imageCache.image(for: urlStr) {
                 storeImage(urlString: urlStr, image: image)
@@ -97,7 +105,8 @@ final class App: NSObject {
     }
     
     private func storeImage(urlString: String, image: UIImage) {
-        let path = NSTemporaryDirectory().appending(UUID().uuidString)
+        guard let pathToCachesDir = pathForCacheDirectoryAsString else { return }
+        let path = pathToCachesDir + "/" + UUID().uuidString
         let url = URL(fileURLWithPath: path)
         
         let data = image.pngData()
@@ -110,32 +119,38 @@ final class App: NSObject {
         UserDefaults.standard.set(dictionary, forKey: imageCacheKey)
     }
     
-    func getImagesFromFileSystem() {
-        if let dictionary = UserDefaults.standard.object(forKey: App.management.imageCacheKey) as? [String : String] {
+    func getImagesFromCachesDirectory() {
+        if var dictionary = UserDefaults.standard.object(forKey: App.management.imageCacheKey) as? [String : String] {
             dictionary.keys.forEach { (urlString) in
                 if let path = dictionary[urlString] {
                     if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
                         let image = UIImage(data: data)
                         App.management.imageCache.insertImage(image, for: urlString)
+                    } else {
+                        dictionary.removeValue(forKey: urlString)
                     }
                 }
             }
         }
     }
     
-    func deleteImagesFromFileSystem() {
-        if let dictionary = UserDefaults.standard.object(forKey: App.management.imageCacheKey) as? [String : String] {
-            dictionary.keys.forEach { (urlString) in
-                if let path = dictionary[urlString] {
-                    
-                    if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-                        
-                    }
+    func clearCachesDirectory() {
+        guard let pathToCachesDirUrl = pathForCacheDirectoryAsUrl else { return }
+        UserDefaults.standard.removeObject(forKey: App.management.imageCacheKey)
+        do {
+            //Get the directory contents urls (including subfolders urls)
+            let directoryContents = try FileManager.default.contentsOfDirectory(at: pathToCachesDirUrl, includingPropertiesForKeys: nil, options: [])
+            for file in directoryContents {
+                do {
+                    try FileManager.default.removeItem(at: file)
+                }
+                catch let error as NSError {
+                    debugPrint("Ooops! Something went wrong: \(error)")
                 }
             }
+        } catch let error as NSError {
+            print(error.localizedDescription)
         }
     }
-    
-    //MARK: -
     
 }

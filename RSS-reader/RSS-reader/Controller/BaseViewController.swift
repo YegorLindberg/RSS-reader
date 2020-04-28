@@ -14,7 +14,6 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
-
     //Use NSLocalizedString for this  method
     func showAlert(with message: String, title: String) {
         let dismissTitle = NSLocalizedString("Dismiss", comment: "Dismiss title")
