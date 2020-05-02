@@ -40,7 +40,7 @@ class SettingsViewController: BaseViewController {
     @IBAction func changeRSSUrlButtonTapped(_ sender: UIButton) {
         if let newUrl = urlTextField?.text {
             self.newUrl = newUrl
-            AppApi().loadNewsList(url: newUrl,
+            App.management.api.loadNewsList(url: newUrl,
                              params: nil,
                              handler: { (responseString, success) in
                                 if success {

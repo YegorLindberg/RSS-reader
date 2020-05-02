@@ -38,7 +38,7 @@ class NewsListViewController: BaseViewController {
     
     func loadNews(_ withCache: Bool) {
         self.tableView?.refreshControl?.beginRefreshing()
-        AppApi().loadNewsList(url: App.management.mainRSSUrls[0].url,
+        App.management.api.loadNewsList(url: App.management.mainRSSUrls[0].url,
                          params: nil,
                          handler: { (responseString, success) in
                             if success {

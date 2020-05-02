@@ -19,7 +19,7 @@ extension UIImageView {
             return
         }
         
-        AppApi().downloadImage(url: urlString) { (data, success) in
+        App.management.api.downloadImage(url: urlString) { (data, success) in
             self.image = success ? UIImage(data: data ?? Data(), scale: 1) : placeholder
             if success {
                 App.management.imageCache.insertImage(self.image, for: urlString)

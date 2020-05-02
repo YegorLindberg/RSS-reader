@@ -18,6 +18,8 @@ final class App: NSObject {
     
     var imageCache = ImageCache()
 
+    let api = AppApi()
+    
     //init singletone
     private override init(){}
     static let management = App()
@@ -26,7 +28,7 @@ final class App: NSObject {
     func parseNewsToCached() {
         newsForCachingList = []
         newsList.forEach { (news) in
-            let cachedItem = CachedNews(context: App.management.context)
+            let cachedItem = CachedNews(context: context)
             cachedItem.title = news.title
             cachedItem.link = news.link
             cachedItem.imageUrl = news.imageUrl ?? ""
@@ -120,7 +122,7 @@ final class App: NSObject {
     }
     
     func getImagesFromCachesDirectory() {
-        if var dictionary = UserDefaults.standard.object(forKey: App.management.imageCacheKey) as? [String : String] {
+        if var dictionary = UserDefaults.standard.object(forKey: imageCacheKey) as? [String : String] {
             dictionary.keys.forEach { (urlString) in
                 if let path = dictionary[urlString] {
                     if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
@@ -128,6 +130,7 @@ final class App: NSObject {
                         App.management.imageCache.insertImage(image, for: urlString)
                     } else {
                         dictionary.removeValue(forKey: urlString)
+                        UserDefaults.standard.set(dictionary, forKey: imageCacheKey)
                     }
                 }
             }
@@ -136,7 +139,7 @@ final class App: NSObject {
     
     func clearCachesDirectory() {
         guard let pathToCachesDirUrl = pathForCacheDirectoryAsUrl else { return }
-        UserDefaults.standard.removeObject(forKey: App.management.imageCacheKey)
+        UserDefaults.standard.removeObject(forKey: imageCacheKey)
         do {
             //Get the directory contents urls (including subfolders urls)
             let directoryContents = try FileManager.default.contentsOfDirectory(at: pathToCachesDirUrl, includingPropertiesForKeys: nil, options: [])

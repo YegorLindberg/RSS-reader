@@ -44,7 +44,7 @@ final class ImageCache {
 //MARK: - ImageCacheType
 extension ImageCache: ImageCacheType {
     
-    //get image by url
+    //get image by url string
     func image(for urlStr: String) -> UIImage? {
         lock.lock(); defer { lock.unlock() }
         // the best case scenario -> there is a decoded image

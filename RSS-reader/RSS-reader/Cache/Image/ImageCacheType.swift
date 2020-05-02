@@ -12,13 +12,13 @@ import UIKit
 // Declares in-memory image cache
 protocol ImageCacheType: class {
     
-    // Returns the image associated with a given url
+    // Returns the image associated with a given url string
     func image(for urlStr: String) -> UIImage?
     
-    // Inserts the image of the specified url in the cache
+    // Inserts the image of the specified url string in the cache
     func insertImage(_ image: UIImage?, for urlStr: String)
     
-    // Removes the image of the specified url in the cache
+    // Removes the image of the specified url string in the cache
     func removeImage(for urlStr: String)
     
     // Removes all images from the cache
